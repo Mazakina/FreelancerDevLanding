@@ -3,7 +3,8 @@ import Header from '@components/Header'
 import ProjectDisplay from '@/components/ProjectDisplay'
 import { Anton, Roboto } from "next/font/google"
 import Division from '@/components/Division'
-
+import Image from 'next/image'
+import Bg from '@images/Bg-full.png'
 const blanka = localFont({ src: '../../public/Blanka.otf' })
 
 const anton = Anton({
@@ -17,11 +18,9 @@ const roboto = Roboto({
 })
 
 export default async function Home() {
-
-  
   return (
-    <main style={{background:"url('../../public/Bg-full.png')"}}>
-      <section className='absolute w-screen'>
+    <main>
+      <section className='absolute w-full' >
         <Header className="p-auto ml-24 mx-4 z-10"/>
         <Division width='98%' height='2px' marginTop='.5rem' marginBottom='.5rem' marginLeft='auto' marginRight="auto" />
         <div className=" flex">
