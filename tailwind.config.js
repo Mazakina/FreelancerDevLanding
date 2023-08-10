@@ -33,8 +33,12 @@ module.exports = {
       height:{
         "screen-1": '770px',
         "screen-2": '1900px',
-        "screen-3": '1240px'
+        "screen-3": '1240px',
+        "120":'480px'
       },
+      skew:{
+        "25":"25deg"
+      }
     },
   },
   plugins: [],
