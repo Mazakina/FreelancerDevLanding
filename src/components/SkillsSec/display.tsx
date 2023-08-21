@@ -64,15 +64,16 @@ export default function Display(){
     setDisplayOn(!displayOn)
   }  
 
+  const [current, setCurrent] = useState(0)
   const hiddenProperties = '-right-full opacity-0 '
   const displayProperties = 'opacity-1 -right-'
   return(
     <div className="box-border border-2 rounded-sm border-c-gray100 display w-3/5 mt-20 mx-auto h-120 relative overflow-hidden">
       <div onClick={onClickChangeDisplayHandler} className={`transition-all duration-700  bg-white absolute h-full w-full `}>
-        <Image height={'480'} width='1440' alt=""  style={{height:'100%',width:'100%',position:'absolute', objectFit:'cover', }} src={Project3.src} />
+        <Image height={'480'} width='1440' alt=""  style={{height:'100%',width:'100%',position:'absolute', objectFit:'cover', }} src={allProjects[current].backgroundImg} />
           <div className="flex flex-col absolute right-0 h-full w-1/3 bg-transparent backdrop-blur-sm border-l-2 backdrop-brightness-50">
-            <h2 className={`text-white text-xl ${anton.className} mx-auto mt-6 `} >Titulo</h2>
-            <p className={`text-white text-base ${roboto.className} mx-auto mt-6 `}>Aplicativo JAM-Stack, feito para que artistas brasileiros divulguem suas artes e possiveis clientes entrem em contato. Utilizando de um layout interativo onde se pode arrastar imagens para dentro de albums ou serem deletadas</p>
+            <h2 className={`text-white text-xl ${anton.className} mx-auto mt-6 `} >{allProjects[current].title}</h2>
+            <p className={`text-white text-base ${roboto.className} mx-auto mt-6 `}>{allProjects[current].description}</p>
           </div>
       </div>
       <div onClick={onClickChangeDisplayHandler} className={`${displayOn? displayProperties: hiddenProperties}0 transition-all duration-1000 cursor-pointer box-content border-l-2 rounded-sm border-c-gray100 overflow-hidden -skew-x-25 w-4/5 bg-gray-600 absolute h-full right-0`}>
