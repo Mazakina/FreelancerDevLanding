@@ -6,6 +6,7 @@ import Project3 from '@images/projeto2 copy.png'
 import Image from 'next/image'
 import { Anton, Roboto } from 'next/font/google'
 import { useState } from 'react'
+import Link from 'next/link'
 
 const roboto = Roboto({
   weight:"400",
@@ -70,11 +71,15 @@ export default function Display(){
   return(
     <div className="box-border border-2 rounded-sm border-c-gray100 display w-3/5 mt-20 mx-auto h-120 relative overflow-hidden">
       <div onClick={onClickChangeDisplayHandler} className={`transition-all duration-700  bg-white absolute h-full w-full `}>
-        <Image height={'480'} width='1440' alt=""  style={{height:'100%',width:'100%',position:'absolute', objectFit:'cover', }} src={allProjects[current].backgroundImg} />
-          <div className="flex flex-col absolute right-0 h-full w-1/3 bg-transparent backdrop-blur-sm border-l-2 backdrop-brightness-50">
-            <h2 className={`text-white text-xl ${anton.className} mx-auto mt-6 `} >{allProjects[current].title}</h2>
-            <p className={`text-white text-base ${roboto.className} mx-auto mt-6 `}>{allProjects[current].description}</p>
+        <Image height={'480'} width='1440' alt=""  style={{height:'100%',width:'100%',position:'absolute', objectFit:'cover', }} src={Project2.src} />
+        <div className="flex flex-col absolute px-4 right-0 h-full w-1/3 bg-transparent backdrop-blur-sm border-l-2 backdrop-brightness-50">
+          <h2 className={`text-white text-xl ${anton.className} mx-auto mt-6 `} >{allProjects[current].title}</h2>
+          <p className={`text-white text-base ${roboto.className} mx-auto mt-6 `}>{allProjects[current].description}</p>
+          <div className={'flex justify-around text-white mt-auto mb-10'}>
+            <Link href='' className={'border-white w-20 border-2 p-2 rounded-sm'}> Site </Link>
+            <Link href='' className={'border-white w-20 border-2 p-2 rounded-sm'} > GitHub</Link>
           </div>
+        </div>
       </div>
       <div onClick={onClickChangeDisplayHandler} className={`${displayOn? displayProperties: hiddenProperties}0 transition-all duration-1000 cursor-pointer box-content border-l-2 rounded-sm border-c-gray100 overflow-hidden -skew-x-25 w-4/5 bg-gray-600 absolute h-full right-0`}>
         <Image height={'480'} width='1440' alt=""  style={{transform:"skew(25deg,0) translatex(-150px)", objectPosition:"60px -60px", filter:"blur(2px)", height:'200%', objectFit:'cover', }} src={FirstImage.src} />
