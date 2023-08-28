@@ -75,9 +75,9 @@ export default function Display(){
         <div className="flex flex-col absolute px-4 right-0 h-full w-1/3 bg-transparent backdrop-blur-sm border-l-2 backdrop-brightness-50">
           <h2 className={`text-white text-xl ${anton.className} mx-auto mt-6 `} >{allProjects[current].title}</h2>
           <p className={`text-white text-base ${roboto.className} mx-auto mt-6 `}>{allProjects[current].description}</p>
-          <div className={'flex justify-around text-white mt-auto mb-10'}>
-            <Link href='' className={'border-white w-20 border-2 p-2 rounded-sm'}> Site </Link>
-            <Link href='' className={'border-white w-20 border-2 p-2 rounded-sm'} > GitHub</Link>
+          <div className={'flex justify-around font-bold text-white mt-auto mb-10'}>
+            <Link href={allProjects[current].github} className={'flex justify-center border-white w-24 border-2 p-2 rounded-sm hover:text-c-orange500 hover:border-c-orange500 hover:bg-white'} > GitHub</Link>
+            <Link href={allProjects[current].site} className={' flex justify-center border-white w-24  border-2 p-2 rounded-sm hover:text-c-orange500 hover:border-c-orange500 hover:bg-white'}> Visitar </Link>
           </div>
         </div>
       </div>
