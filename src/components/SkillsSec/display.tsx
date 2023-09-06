@@ -67,7 +67,6 @@ export default function Display(){
 
   const [current, setCurrent] = useState(0)
   const hiddenProperties = '-right-full opacity-0 '
-  const displayProperties = 'opacity-1 -right-'
   return(
     <div className="box-border border-2 rounded-sm border-c-gray100 display w-3/5 mt-20 mx-auto h-120 relative overflow-hidden">
       <div onClick={onClickChangeDisplayHandler} className={`transition-all duration-700  bg-white absolute h-full w-full `}>
@@ -81,14 +80,14 @@ export default function Display(){
           </div>
         </div>
       </div>
-      <div onClick={onClickChangeDisplayHandler} className={`${displayOn? displayProperties: hiddenProperties}0 transition-all duration-1000 cursor-pointer box-content border-l-2 rounded-sm border-c-gray100 overflow-hidden -skew-x-25 w-4/5 bg-gray-600 absolute h-full right-0`}>
+      <div onClick={onClickChangeDisplayHandler} className={`${displayOn? ('opacity-1 right-0'): hiddenProperties} transition-all duration-1000 cursor-pointer box-content border-l-2 rounded-sm border-c-gray100 overflow-hidden -skew-x-25 w-4/5 bg-gray-600 absolute h-full `}>
         <Image height={'480'} width='1440' alt=""  style={{transform:"skew(25deg,0) translatex(-150px)", objectPosition:"60px -60px", filter:"blur(2px)", height:'200%', objectFit:'cover', }} src={FirstImage.src} />
       </div>
-      <div onClick={onClickChangeDisplayHandler} className={` ${displayOn? displayProperties: hiddenProperties}0 transition-all duration-1000 cursor-pointer box-content border-l-2 rounded-sm border-c-gray100
-      overflow-hidden -skew-x-25 w-3/6 absolute h-full right-4`}>
+      <div onClick={onClickChangeDisplayHandler} className={` ${displayOn? ('opacity-1 right-4'): hiddenProperties} transition-all duration-1000 cursor-pointer box-content border-l-2 rounded-sm border-c-gray100
+      overflow-hidden -skew-x-25 w-3/6 absolute h-full`}>
         <Image height={'480'} width='1440' alt=""  style={{transform:"skew(25deg,0) translatex(-130px)",height:'100%',width:'1000px',maxWidth:'1000px',position:'absolute' ,objectPosition:"-20px 0" ,filter:"blur(1px)", objectFit:'cover', }} src={Project2.src} />
-      </div>
-      <div onClick={onClickChangeDisplayHandler} className={` ${displayOn? displayProperties: hiddenProperties}32 transition-all duration-1000 cursor-pointer box-content border-l-2 rounded-sm border-c-gray100 overflow-hidden -skew-x-25 w-1/3 absolute h-full `}>
+      </div>(
+      <div onClick={onClickChangeDisplayHandler} className={` ${displayOn? ('opacity-1 -right-32'): hiddenProperties} top-0 transition-all duration-1000 cursor-pointer box-content border-l-2 rounded-sm border-c-gray100 overflow-hidden -skew-x-25 w-1/3 absolute h-full `}>
         <Image height={'480'} width='1440' alt=""  style={{transform:"skew(25deg,0) translatex(-80px)",height:'140%',width:'800px',maxWidth:'800px',position:'absolute',objectPosition:"-70px -150px",filter:"blur(1px)", objectFit:'cover', }} src={Project3.src} />
       </div>
       
