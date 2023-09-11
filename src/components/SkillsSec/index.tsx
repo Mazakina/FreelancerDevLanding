@@ -2,6 +2,7 @@ import { Anton } from "next/font/google"
 import Image from "next/image"
 import skills from "@images/skillsArr.png"
 import Display from "./display"
+import AboutMe from "../AboutMe"
 const anton = Anton({
   weight:"400",
   subsets:['latin']
@@ -17,6 +18,8 @@ export default function SkillsSec(){
         <h4 className={`${anton.className} tracking-widest mt-24 mx-auto inline-block text-3xl text-c-gray100`}>PROJETOS</h4>
         <Display/>
       </div>
+      <AboutMe/>
+
     </div>
   )
 }
