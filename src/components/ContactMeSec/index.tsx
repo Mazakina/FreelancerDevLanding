@@ -4,9 +4,15 @@ export default function ContactMeSec(){
       <form method='post' action='contact'>
         <fieldset>
           <legend>Fale Comigo</legend>
-           <div>
-             <label htmlFor="name">Seu nome:</label>
-             <input type="text" id="name"  value=''/>
+           <div className="flex">
+            <div>
+              <label htmlFor="name">Seu nome:</label>
+              <input type="text" id="name"  value=''/>
+            </div>
+            <div>
+              <label htmlFor="email">E-mail:</label>
+              <input type="email" id="email"  value=''/>
+            </div>
            </div>
         </fieldset>        
       </form>
