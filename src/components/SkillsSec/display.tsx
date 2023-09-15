@@ -90,7 +90,6 @@ export default function Display(){
       <div onClick={onClickChangeDisplayHandler} className={` ${displayOn? ('opacity-1 -right-32'): hiddenProperties} top-0 transition-all duration-1000 cursor-pointer box-content border-l-2 rounded-sm border-c-gray100 overflow-hidden -skew-x-25 w-1/3 absolute h-full `}>
         <Image height={'480'} width='1440' alt=""  style={{transform:"skew(25deg,0) translatex(-80px)",height:'140%',width:'800px',maxWidth:'800px',position:'absolute',objectPosition:"-70px -150px",filter:"blur(1px)", objectFit:'cover', }} src={Project3.src} />
       </div>
-      
     </div>
   )
 }
