@@ -18,6 +18,7 @@ module.exports = {
         "c-gray900": "#141414",
         "c-orange500": "#FF3D00",
         "c-green500": "#00E25B",
+        "c-blue800": "#171B26", 
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
