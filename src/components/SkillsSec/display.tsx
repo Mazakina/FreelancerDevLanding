@@ -68,7 +68,7 @@ export default function Display(){
   const [current, setCurrent] = useState(0)
   const hiddenProperties = '-right-full opacity-0 '
   return(
-    <div className="box-border border-2 rounded-sm border-c-gray100 display w-3/5 mt-20 mx-auto h-120 relative overflow-hidden">
+    <div  className="box-border border-2 rounded-sm border-c-gray100 display w-3/5 mt-20 mx-auto h-120 relative overflow-hidden">
       <div onClick={onClickChangeDisplayHandler} className={`transition-all duration-700  bg-white absolute h-full w-full `}>
         <Image height={'480'} width='1440' alt=""  style={{height:'100%',width:'100%',position:'absolute', objectFit:'cover', }} src={Project2.src} />
         <div className="flex flex-col absolute px-4 right-0 h-full w-1/3 bg-transparent backdrop-blur-sm border-l-2 backdrop-brightness-50">

@@ -1,12 +1,11 @@
 import Header from '@components/Header'
-import ProjectDisplay from '@/components/ProjectDisplay'
-import Division from '@/components/Division'
 import localFont from 'next/font/local'
 import { Anton, Roboto } from "next/font/google"
 import HomeSec from '@/components/HomeSec'
 import SkillsSec from '@/components/SkillsSec'
-import AboutMe from '@/components/AboutMe'
 import ContactMeSec from '@/components/ContactMeSec'
+import FooterSec from '@/components/FooterSec'
+import SvgOverlay from '@/components/SvgOverlay'
 const blanka = localFont({ src: '../../public/Blanka.otf' })
 
 const anton = Anton({
@@ -23,10 +22,12 @@ export default async function Home() {
   return (
     <main>
       <section className='relative w-full' >
+        <SvgOverlay/>
         <Header className="p-auto ml-24 mr-4 z-10"/>
         <HomeSec/>
         <SkillsSec/>
         <ContactMeSec/>
+        <FooterSec/>
       </section>
 
     </main>

@@ -1,9 +1,11 @@
 import Image from "next/image"
+import Link from "next/link"
 
 
 export default function Label({img,className}:any){
   return(
-    <div
+    <Link
+    href='#skills'
       className={`relative ${className} pb-6`}
     >
       <div
@@ -29,6 +31,6 @@ export default function Label({img,className}:any){
         alt=""
       />
 
-    </div>
+    </Link>
   )
 }

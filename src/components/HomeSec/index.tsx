@@ -16,7 +16,7 @@ const roboto = Roboto({
 
 export default function HomeSec(){
   return(
-    <div className={`bg-c-gray100 w-full max-w-8xl h-screen-1 justify-center flex-1 mx-auto  ${anton.className}`}>
+    <div id='home' className={`bg-c-gray100 w-full max-w-8xl h-screen-1 justify-center flex-1 mx-auto  ${anton.className}`}>
       <section className='flex justify-between pt-24 ' >
         <div className=" flex flex-col left-home align-center justify-center max-w-112 w-1/3">
           <p className= {`w-fit text-c-orange500 tracking-widest`}>

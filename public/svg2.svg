@@ -1,0 +1,7 @@
+<svg id="line-box" viewBox="0 0 100 100" preserveAspectRatio="none">
+  <path d="M 2 0 L 2 16 L 5 19 L 95 19 L 98 22 L 98 45"
+        fill="none"
+        stroke="#cccccc"
+        stroke-width="2"
+        vector-effect="non-scaling-stroke"></path>
+</svg>
