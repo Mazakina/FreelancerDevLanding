@@ -11,7 +11,7 @@ const anton = Anton({
 })
 export default function FooterSec(){
   return(
-    <footer>
+    <footer id='footer'>
       <div className={`flex max-w-4xl mx-auto  justify-center items-center`}>
         <h2 className={` text-3xl -mt-2 ml-4 ${blanka.className}`}>
           MAZA<span className="text-c-orange500">K</span>INA

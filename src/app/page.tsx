@@ -6,6 +6,7 @@ import SkillsSec from '@/components/SkillsSec'
 import ContactMeSec from '@/components/ContactMeSec'
 import FooterSec from '@/components/FooterSec'
 import SvgOverlay from '@/components/SvgOverlay'
+import SideNav from '@/components/SideNav'
 const blanka = localFont({ src: '../../public/Blanka.otf' })
 
 const anton = Anton({
@@ -21,7 +22,8 @@ const roboto = Roboto({
 export default async function Home() {
   return (
     <main>
-      <section className='relative w-full' >
+      <section className='relative w-full [max-width:100vw] overflow-hidden' >
+        <SideNav/>
         <SvgOverlay/>
         <Header className="p-auto ml-24 mr-4 z-10"/>
         <HomeSec/>

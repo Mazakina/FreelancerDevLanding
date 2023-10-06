@@ -2,6 +2,8 @@ import Division from "../Division";
 import ProjectDisplay from "../ProjectDisplay";
 import localFont from 'next/font/local'
 import { Anton, Roboto } from "next/font/google"
+import {AiOutlineGithub} from "react-icons/ai"
+import {BsLinkedin} from  "react-icons/bs"
 const blanka = localFont({ src: '../../../public/Blanka.otf' })
 
 const anton = Anton({
@@ -16,7 +18,7 @@ const roboto = Roboto({
 
 export default function HomeSec(){
   return(
-    <div id='home' className={`bg-c-gray100 w-full max-w-8xl h-screen-1 justify-center flex-1 mx-auto  ${anton.className}`}>
+    <div id='home' className={`bg-c-gray100 w-full max-w-8xl  h-screen-1 justify-center flex-1 mx-auto  ${anton.className}`}>
       <section className='flex justify-between pt-24 ' >
         <div className=" flex flex-col left-home align-center justify-center max-w-112 w-1/3">
           <p className= {`w-fit text-c-orange500 tracking-widest`}>
@@ -33,16 +35,16 @@ export default function HomeSec(){
           <div className={"project-preview"}>
 
           </div>
-          <div className={"right-home-info"}>
+          <div className={"right-home-info z-20"}>
             <div>
               <ProjectDisplay/>
-              <div className={"ml-40 mt-12"}>
-                <h2 className={` text-6xl ${blanka.className}`}>
+              <div className={"ml-40 z-20 mt-12 sticky"}>
+                <h2 className={` text-6xl z-40 ${blanka.className}`}>
                 MAZA<span className="text-c-orange500">K</span>INA
                 </h2>
-                <div className={"flex mt-8 ml-24"}>
-                  <a  href="">IN</a>
-                  <a className={"ml-6"} href="">GiT</a>
+                <div className={"flex items-center mt-8 ml-24"}>
+                  <a  href=""><BsLinkedin className={"text-xl"}/></a>
+                  <a className={"ml-6"} href=""><AiOutlineGithub className={"text-2xl"}/></a>
                   <p className={"ml-6"}>(11) 99609-2722</p>
                 </div>
               </div>

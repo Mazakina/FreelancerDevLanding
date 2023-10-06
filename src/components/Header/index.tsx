@@ -28,7 +28,7 @@ export default function Header({className}:HeaderSiteProps){
           Fale Comigo
         </Link>
       </header>
-      <Division width='95vw' height='2px' marginTop='.5rem' marginBottom='.5rem' marginLeft='auto' marginRight="auto" />
+      <Division width='98vw' height='2px' marginTop='.5rem' marginBottom='.5rem' marginLeft='auto' marginRight="auto" />
     </div>
   )
 }

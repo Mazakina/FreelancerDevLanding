@@ -7,7 +7,7 @@ import ProjectOne from '@images/htmlImg1.png'
 export default function ProjectDisplay(){
   const someArray = [ProjectOne,ProjectTwo,ProjectThree,ProjectOne]
   return(
-    <div className="flex w-auto">
+    <div className="flex w-auto relative">
       {
         someArray.map((value,index)=>{
           let ml;

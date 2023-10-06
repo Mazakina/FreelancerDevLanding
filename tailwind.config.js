@@ -39,8 +39,15 @@ module.exports = {
       },
       skew:{
         "25":"25deg"
+      },
+      writingMode:{
+        'vertical-rl':'vertical-rl'
+      },
+      fontSize:{
+        '3xl':'26px'
       }
     },
   },
   plugins: [],
+  
 }
