@@ -68,7 +68,7 @@ export default function Display(){
   const [current, setCurrent] = useState(0)
   const hiddenProperties = '-right-full  opacity-0 '
   return(
-    <div  className="box-border border-2 rounded-sm border-c-gray100 display w-3/5 mt-20 mx-auto h-120 relative overflow-hidden">
+    <div  className="box-border border-2 z-20 rounded-sm border-c-orange500 display w-3/5 mt-16 mx-auto h-120 relative overflow-hidden">
       <div onClick={onClickChangeDisplayHandler} className={`transition-all duration-700  bg-white absolute h-full w-full `}>
         <Image height={'480'} width='1440' alt=""  style={{height:'100%',width:'100%',position:'absolute', objectFit:'cover', }} src={Project2.src} />
         <div className="flex flex-col absolute px-4 right-0 h-full w-1/3 bg-transparent backdrop-blur-sm border-l-2 backdrop-brightness-50">
@@ -88,14 +88,15 @@ export default function Display(){
             }>{allProjects[current].description}</p>
           <div className={'flex justify-around font-bold text-white mt-auto mb-10'}>
            <Link
-              href={allProjects[current].github}
-              className={'flex justify-center border-white  w-24 border-2 p-2 rounded-sm  hover:text-c-orange500  hover:border-c-orange500 hover:bg-white'}> GitHub</Link>
+             href={allProjects[current].github}
+             className={'flex justify-center border-white w-24 border-2 p-2 rounded-sm hover:text-c-orange500 hover:border-c-orange500 hover:bg-white'}>
+             GitHub</Link>
             <Link href={allProjects[current].site} className={' flex justify-center border-white w-24  border-2 p-2 rounded-sm hover:text-c-orange500 hover:border-c-orange500 hover:bg-white'}> Visitar </Link>
           </div>
         </div>
       </div>
 
-      <div onClick={onClickChangeDisplayHandler} className={`${displayOn? ('opacity-1 right-0'): hiddenProperties} transition-all duration-1000 cursor-pointer box-content border-l-2 rounded-sm border-c-gray100 overflow-hidden -skew-x-25 w-4/5 bg-gray-600 absolute h-full `}>
+      <div onClick={onClickChangeDisplayHandler} className={`${displayOn? ('opacity-1 right-0'): hiddenProperties} transition-all duration-1000 cursor-pointer box-content border-l-2 rounded-sm border-c-orange500 overflow-hidden -skew-x-25 w-4/5 bg-gray-600 absolute h-full `}>
         
         <Image 
           height={'480'} 
@@ -117,10 +118,24 @@ export default function Display(){
           font-medium`}>Texto</p>
       </div>
 
-      <div 
-        onClick={onClickChangeDisplayHandler} 
-        className={` ${displayOn? ('opacity-1 right-4'): hiddenProperties} transition-all duration-1000 cursor-pointer box-content border-l-2 rounded-sm border-c-gray100
-      overflow-hidden -skew-x-25 w-3/6 absolute h-full`}>
+      <div
+        onClick={onClickChangeDisplayHandler}
+        className={`
+          ${displayOn?
+          ('opacity-1 right-4'):
+          hiddenProperties}
+          transition-all
+          duration-1000
+          cursor-pointer
+          box-content
+          border-l-2
+          rounded-sm
+          border-c-orange500
+          overflow-hidden
+          -skew-x-25
+          w-3/6
+          absolute
+          h-full`}>
         <Image 
           height={'480'} 
           width='1440' 
@@ -140,7 +155,26 @@ export default function Display(){
           font-medium`}>Texto</p>
       </div>
 
-      <div onClick={onClickChangeDisplayHandler} className={` ${displayOn? ('opacity-1 -right-32'): hiddenProperties} top-0 transition-all duration-1000 cursor-pointer box-content border-l-2 rounded-sm border-c-gray100 overflow-hidden -skew-x-25 w-1/3 absolute h-full `}>
+      <div
+        onClick={onClickChangeDisplayHandler}
+        className={`
+        ${displayOn?
+        ('opacity-1 -right-32'):
+        hiddenProperties}
+        top-0
+        transition-all
+        duration-1000
+        cursor-pointer
+        box-content
+        border-l-2
+        rounded-sm
+        border-c-orange500
+        overflow-hidden
+        -skew-x-25
+        w-1/3
+        absolute
+        h-full
+        `}>
         <Image
           height={'480'}
           width='1440'

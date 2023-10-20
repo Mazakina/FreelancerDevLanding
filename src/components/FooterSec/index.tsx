@@ -35,7 +35,11 @@ export default function FooterSec(){
           <li className='mt-4'><Link target="_blank" href='https://www.instagram.com/mazakina_/'>Instagram</Link></li>
           <li className='mt-4'><Link target="_blank" href='https://www.linkedin.com/in/paulo-mazakina-1236811b4/'>LinkedIn</Link></li>
           <li className='mt-4'><Link target="_blank" href='https://github.com/Mazakina'>GitHub</Link></li>
-          <li className='mt-4'><button onClick={()=>navigator.clipboard.writeText('8.mazakina@gmail.com')} >8.mazakina@gmail.com</button></li>
+          <li className='mt-4 relative'>
+            <button onClick={()=>navigator.clipboard.writeText('8.mazakina@gmail.com')} >
+              8.mazakina@gmail.com
+            </button>
+          </li>
         </ul>
       </div>
     </footer>

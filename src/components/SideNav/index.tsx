@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function SideNav(){
   const pages=['home', 'skills', 'aboutMe', 'contact', 'footer']
   const container = {
-    hidden: { opacity: 1, scale: 0 },
+    hidden: { opacity: 1, scale: 1 },
     visible: {
       opacity: 1,
       scale: 1,
@@ -33,7 +33,7 @@ export default function SideNav(){
   };
 
   return(
-  <div id='side-nav' className="z-10 fixed flex justify-center [right:100px] [top:240px] ">
+  <div id='side-nav' className="z-20 fixed flex justify-center [right:100px] [top:240px] ">
     <div className="h-64 absolute [width:1px] bg-c-green500" />
     <motion.ul 
       className="container w-fit py-2 absolute flex flex-col h-64 justify-around"
@@ -54,7 +54,7 @@ export default function SideNav(){
             rotate:135
           }} 
           href={'#'+value}
-          className="item [height:5px] [width:5px] cursor-pointer  box-content border-2 bg-c-green500 border-c-green500  " variants={item} 
+          className="item [height:10px] [width:10px] cursor-pointer   rounded-sm box-content bg-c-green500  " variants={item} 
           />
         )
       })}

@@ -32,7 +32,7 @@ module.exports = {
         '8xl':'1440px'
       },
       height:{
-        "screen-1": '770px',
+        "screen-1": '800px',
         "screen-2": '1900px',
         "screen-3": '1240px',
         "120":'480px'

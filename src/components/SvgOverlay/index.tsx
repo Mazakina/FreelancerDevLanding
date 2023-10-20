@@ -11,24 +11,24 @@ const blanka = localFont({ src: '../../../public/Blanka.otf' })
 export default function SvgOverlay(){
   return(
     
-    <div className='relative z-0 [max-width:100vw]'>
+    <div className='relative z-10 [max-width:100vw]'>
       <div id="circle-one" className=" z-0 w-full [margin-top:440px] absolute [right:-74%]">
         <div  className=" absolute rounded-full border-2 borcer-c-green500 [width:650px] [height:650px] brightness-150 border-c-green500" />
         <div  className=" absolute rounded-full border-4 opacity-80 borcer-c-green500 [width:650px] [height:650px] blur-sm border-c-green500" />
       </div>
-      <div  id="circle-two" className="absolute top-16 rounded-full border-2 border-c-green500  opacity-30 [right:-11%] [width:600px] [height:600px] " />
+      <div  id="circle-two" className="absolute  rounded-full border-2 border-c-green500  opacity-30 [right:-11%] [top:100px] [width:600px] [height:600px] " />
       <div  id="circle-three" className="absolute [top:2300px] rounded-full border-2 border-c-green500 opacity-70 [right:-11%] [width:600px] [height:600px] " />
-      <div className='absolute [right:2vw]'>
-        <VerticalDivision height='700px'/>
+      <div className='absolute [right:1.5vw]'>
+        <VerticalDivision height='800px'/>
       </div>
       <div className='absolute flex-col justify-center items-center [margin-left:1.53vw] '>
         <VerticalDivision height='350px'/>
         <div className='w-4 h-4 rounded-full border-1 border-c-green500 shadow-inner mx-auto shadow-c-green500'/>
         <VerticalDivision height='100px'/>
-        <p className={`text-c-green500 [writing-mode:vertical-lr] ${blanka.className} -mr-2 `}>
+        <p className={`text-c-green500 [writing-mode:vertical-lr] text-sm ${blanka.className} -mr-2 `}>
           FRONT-END DEVELOPER
         </p>
-          <VerticalDivision height='620px'/>
+          <VerticalDivision height='640px'/>
         <ProjectSvg />
       </div>
       <svg style={{position:'absolute',
