@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 export default async function List(){
-  const response = await fetch('http://localhost:3000/list')
+  const response = await fetch(process.env.BASE_URL+'/list')
   const {files} = await response.json()
 
   return(
