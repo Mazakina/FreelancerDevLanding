@@ -12,7 +12,7 @@ const anton = Anton({
 
 export default function SkillsSec(){
   return(
-    <div id='skills' className=" mt-8 bg-c-gray900 h-screen-2 flex-1 " >
+    <div id='skills' className=" bg-c-gray900 h-screen-2 flex-1 " >
       <div className="flex flex-col pt-8 tracking-widest">
         <h4 className={`${anton.className} tracking-widest mx-auto inline-block text-3xl text-c-gray100`}>MINHAS SKILLS</h4>
         <Carrosel />

@@ -33,7 +33,7 @@ export default function SideNav(){
   };
 
   return(
-  <div id='side-nav' className="z-20 fixed flex justify-center [right:100px] [top:240px] ">
+  <div id='side-nav' className="ss:hidden z-20 fixed flex justify-center [right:100px] [top:240px] ">
     <div className="h-64 absolute [width:1px] bg-c-green500" />
     <motion.ul 
       className="container w-fit py-2 absolute flex flex-col h-64 justify-around"
@@ -54,7 +54,7 @@ export default function SideNav(){
             rotate:135
           }} 
           href={'#'+value}
-          className="item [height:10px] [width:10px] cursor-pointer   rounded-sm box-content bg-c-green500  " variants={item} 
+          className=" item [height:10px] [width:10px] cursor-pointer   rounded-sm box-content bg-c-green500  " variants={item} 
           />
         )
       })}

@@ -18,10 +18,10 @@ export default function SvgOverlay(){
       </div>
       <div  id="circle-two" className="absolute  rounded-full border-2 border-c-green500  opacity-30 [right:-11%] [top:100px] [width:600px] [height:600px] " />
       <div  id="circle-three" className="absolute [top:2300px] rounded-full border-2 border-c-green500 opacity-70 [right:-11%] [width:600px] [height:600px] " />
-      <div className='absolute [right:1.5vw]'>
+      <div id='right-home-line' className=' ss:hidden absolute [right:1.5vw]'>
         <VerticalDivision height='800px'/>
       </div>
-      <div className='absolute flex-col justify-center items-center [margin-left:1.53vw] '>
+      <div id='left-home-line' className='absolute flex-col justify-center items-center ss:[margin-left:1rem] [margin-left:1.53vw] '>
         <VerticalDivision height='350px'/>
         <div className='w-4 h-4 rounded-full border-1 border-c-green500 shadow-inner mx-auto shadow-c-green500'/>
         <VerticalDivision height='100px'/>

@@ -51,16 +51,16 @@ export default function ContactMeSec(){
 
   const inputContact = ' rounded-md bg-c-blue800  text-white p-1 '+ sans.className
   return(
-    <div id='contact' className= {`max-w-4xl mx-auto z-20 sticky mt-16 mb-20`}>
+    <div id='contact' className= {`max-w-4xl  mx-auto z-20 sticky mt-16 mb-20`}>
       <form method='post' action='contact' onSubmit={submitHandler}>
-        <fieldset className="mx-auto ">
+        <fieldset className="ss:w-4/5 mx-auto ">
           <legend className={`${anton.className} flex justify-center mx-auto text-2xl mb-9`}>Fale Comigo</legend>
-            <div className={`${anton.className} flex justify-center text-base`} >
-              <div className="flex flex-col w-2/5">
+            <div className={`${anton.className} flex  ss:flex-col justify-center text-base`} >
+              <div className="flex flex-col  w-2/5">
                 <label htmlFor="name">Seu nome: *</label>
                 <input
                   className={`${inputContact}
-                  h-10`}
+                  h-10 `}
                   type="text"
                   
                   id="name"

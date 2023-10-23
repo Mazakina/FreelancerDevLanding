@@ -46,3 +46,17 @@ body {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #555;
 }
+
+
+@layer utilities {
+
+  .clip-path-height {
+
+    clip-path:path("M0 442V41.0122L0.0121926 41.0244L41.0244 0.012207L41.0122 0H96V401.012L55.0122 442H0Z")
+
+  }
+  .clip-path-wide{
+    clip-path: path("M330 79.3985H30.6202L30.6293 79.3884L0.00928877 45.4686L0 45.4789L5.4233e-07 0L299.398 3.57029e-06L330 33.8995V79.3985Z")
+  }
+
+}

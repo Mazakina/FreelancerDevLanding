@@ -3,7 +3,7 @@ import Image from "next/image"
 import { motion } from "framer-motion";
 
 
-export default function Label({img,className,text}:any){
+export default function Label({img,className='',text}:any){
   
   const item = {
     hidden: { 
@@ -23,39 +23,54 @@ export default function Label({img,className,text}:any){
     
     <motion.a
       href='#skills'
-      className={`item relative  ${className} pb-6`}
+      className={`item 
+      relative 
+      ss:[height:96px] ss:[width:330px] ss:[max-width:80vw]
+      ss:mx-auto
+      ${className}  
+      pb-6 ss:pb-0
+      
+      `}
       variants={item} 
     >
       <div
-        className="bg-c-gray200 "
-        style={{
-          height:'442px',
-          width:' 96px',
-          objectFit: 'cover',
-          zIndex: 2,
-          clipPath: 'path("M0 442V41.0122L0.0121926 41.0244L41.0244 0.012207L41.0122 0H96V401.012L55.0122 442H0Z")'
-        }}
+        className='
+        bg-c-gray200 
+        ss:hidden 
+        [height:442px] 
+        [width:96px] 
+        object-cover
+        [z-index:2]
+        clip-path-wide
+        mdall:clip-path-height
+        '
       />
       <div
-        className="absolute top-6 hover:top-3  cursor-pointer transition-all  duration-500 
+        className='absolute 
+        top-6 hover:top-3 
+        [height:442px] [width:96px] 
+        cursor-pointer 
+        transition-all  
+        duration-500 
         ease-in-out
-        "
-        style={{
-          height:'442px',
-          width:' 96px',
-          objectFit: 'cover',
-          zIndex: 2,
-          clipPath: 'path("M0 442V41.0122L0.0121926 41.0244L41.0244 0.012207L41.0122 0H96V401.012L55.0122 442H0Z")'
-        }}
+        clip-path-wide
+        mdall:clip-path-height
+        ss:[height:96px] ss:[width:330px] 
+        ss:top-0 
+        object-cover
+        [z-index:2]
+        '
+
       >
         <Image
-          style={{
-            position:'absolute',
-            height:'442px',
-            width:' 96px',
-            objectFit: 'cover',
-            zIndex: 2,
-          }}
+          className="
+            absolute
+            [height:442px]
+            [width:96px]
+            [z-index:2]
+            object-cover
+            ss:[height:96px] ss:[width:330px] 
+          "
           src={img}
           alt=""
         />
@@ -69,11 +84,13 @@ export default function Label({img,className,text}:any){
           flex
           justify-center
           items-center
-          absolute z-20
+          absolute 
+          z-20
           transition-all
         ">
           <p className="
           [writing-mode:vertical-lr] 
+          ss:[writing-mode:horizontal-tb]
           text-lg
           tracking-widest
           text-white
