@@ -12,6 +12,7 @@ export default function BgImage() {
       overflow-hidden
       '>
       <Image src={bgImg}
+        priority
         alt='imagem de fundo' 
         className='
         z-0

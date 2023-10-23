@@ -27,9 +27,8 @@ export default function Label({img,className='',text}:any){
       relative 
       ss:[height:96px] ss:[width:330px] ss:[max-width:80vw]
       ss:mx-auto
-      ${className}  
       pb-6 ss:pb-0
-      
+      ${className}  
       `}
       variants={item} 
     >
