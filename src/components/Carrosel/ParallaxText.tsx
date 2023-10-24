@@ -27,7 +27,7 @@ export default function ParallaxText({ baseVelocity = 100 }: ParallaxProps) {
 
   const directionFactor = useRef<number>(1);
   useAnimationFrame((t, delta) => {
-    let moveBy = directionFactor.current * .7 * baseVelocity * (delta / 1000);
+    let moveBy = directionFactor.current  * baseVelocity * (delta / 1000);
 
     moveBy +=  velocityFactor.get();
 

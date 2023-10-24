@@ -2,7 +2,7 @@ import newSvg from '@images/svg2.svg'
 import Division from '../Division'
 import localFont from 'next/font/local'
 import {PiAppWindowLight} from 'react-icons/pi'
-import {BiRightArrow} from 'react-icons/bi'
+import {BiLeftArrow, BiRightArrow} from 'react-icons/bi'
 import {LiaUserSolid} from 'react-icons/lia'
 
 
@@ -49,7 +49,9 @@ export default function SvgOverlay(){
         />
         <ProjectSvg />
       </div>
-      <svg style={{position:'absolute',
+      <svg 
+        className='ss:hidden'
+        style={{position:'absolute',
         margin:'1420px 0 0 1.5vw',
         paddingLeft:'.5rem',
         height:'875px', 
@@ -64,7 +66,9 @@ export default function SvgOverlay(){
               stroke-width="2"
               vector-effect="non-scaling-stroke"></path>
       </svg>
-      <svg style={{position:'absolute',
+      <svg 
+        className='ss:hidden'
+        style={{position:'absolute',
         margin:'1420px 0 0 1.5vw',
         paddingLeft:'.5rem',
         height:'875px', 
@@ -79,7 +83,7 @@ export default function SvgOverlay(){
               stroke-width="2"
               vector-effect="non-scaling-stroke"></path>
       </svg>
-      <div className='absolute flex-col justify-center items-center ss:[margin-left:1rem] [margin-left:2vw] [margin-top:2200px] '>
+      <div className='absolute flex-col justify-center items-center ss:[right:1.5rem] [margin-left:2vw] ss:[margin-top:1820px] [margin-top:2200px] '>
         <AboutMeSvg />
         <VerticalDivision height='1300px'/>
       </div>
@@ -105,14 +109,15 @@ export function ProjectSvg(){
 
 export function AboutMeSvg(){
   return(
-    <div className='mt-8 -ml-2 w-0 '>
+    <div className='mt-8 -ml-2 ss:-ml-7 w-0 '>
       <div className='w-fit items-center flex flex-row'>
+        <BiLeftArrow className="text-c-green500 ss:inline-block hidden  text-xl"/>
         <div className='hover:brightness-150 transition-all w-7 h-7 relative'>
           <LiaUserSolid className="absolute text-c-green500 -left-1 text-3xl " />
           <div className='absolute bg-c-green500 w-5 h-5 blur-md top-1 left-1' />
           <div className='absolute bg-c-green500 w-5 h-5 blur-xl top-1 left-1' />
         </div>
-        <BiRightArrow className="text-c-green500  text-xl"/>
+        <BiRightArrow className="text-c-green500 ss:hidden  text-xl"/>
       </div>
     </div>
   )
