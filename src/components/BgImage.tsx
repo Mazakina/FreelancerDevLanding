@@ -22,7 +22,7 @@ export default function BgImage() {
         absolute
         blur-sm
         object-cover
-        [object-position:50%20%]
+        [object-position:50%2rem]
        '/>
        <div
        style={{

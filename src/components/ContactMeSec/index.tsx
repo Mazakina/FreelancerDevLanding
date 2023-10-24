@@ -53,16 +53,15 @@ export default function ContactMeSec(){
   return(
     <div id='contact' className= {`max-w-4xl  mx-auto z-20 sticky mt-16 mb-20`}>
       <form method='post' action='contact' onSubmit={submitHandler}>
-        <fieldset className="ss:w-4/5 mx-auto ">
+        <fieldset className="ss:[width:90%] mx-auto flex flex-col justify-center items-center  ">
           <legend className={`${anton.className} flex justify-center mx-auto text-2xl mb-9`}>Fale Comigo</legend>
-            <div className={`${anton.className} flex  ss:flex-col justify-center text-base`} >
-              <div className="flex flex-col  w-2/5">
+
+            <div className={`${anton.className}  w-4/5  ss:flex-col flex justify-center text-base`} >
+              <div className=" ss:mx-auto ss:[width:100%] flex flex-col  w-2/5">
                 <label htmlFor="name">Seu nome: *</label>
                 <input
-                  className={`${inputContact}
-                  h-10 `}
+                  className={`${inputContact} h-10 `}
                   type="text"
-                  
                   id="name"
                   placeholder="Digite aqui." 
                   value={name}
@@ -70,7 +69,7 @@ export default function ContactMeSec(){
                   onChange={handleNameChange}
                   />
               </div>
-              <div className="flex flex-col w-2/5  pl-8" >
+              <div className="flex mx-auto ss:[width:100%]  flex-col w-3/5 ss:pl-0  pl-8" >
                 <label htmlFor="email">E-mail:</label>
                 <input
                   className={`${inputContact}
@@ -84,12 +83,12 @@ export default function ContactMeSec(){
                   />
               </div>
             </div>
-            <div className={`${anton.className} flex justify-center text-base`} >
-              <div className="flex flex-col w-1/5" >
+            <div className={`${anton.className}  w-4/5  ss:flex-col flex justify-center text-base`} >
+              <div className="flex flex-col ss:mx-auto ss:[width:100%] ss:pl-0 w-1/5" >
                 <label htmlFor="telefone">Telefone:</label>
                 <input
                   className={`${inputContact}
-                  h-10`}
+                  h-10  `}
                   type="tel"
                   id="telefone"
                   placeholder="(**) _____-____" 
@@ -97,7 +96,7 @@ export default function ContactMeSec(){
                   onChange={handleTelefoneChange}
                   />
               </div>
-              <div className="flex flex-col w-3/5 pl-8" >
+              <div className=" flex flex-col w-4/5 pl-8 mx-auto ss:[width:100%] ss:pl-0" >
                 <label htmlFor="assunto">Assunto:</label>
                 <input
                   className={`${inputContact}

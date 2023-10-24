@@ -7,6 +7,7 @@ import ContactMeSec from '@/components/ContactMeSec'
 import FooterSec from '@/components/FooterSec'
 import SvgOverlay from '@/components/SvgOverlay'
 import SideNav from '@/components/SideNav'
+import ResponsiveHeader from '@/components/ResponsiveHeader'
 const blanka = localFont({ src: '../../public/Blanka.otf' })
 
 const anton = Anton({
@@ -26,6 +27,7 @@ export default async function Home() {
         <SideNav/>
         <SvgOverlay/>
         <Header className="p-auto ml-24 mr-4 z-10"/>
+        <ResponsiveHeader/>
         <HomeSec/>
         <SkillsSec/>
         <ContactMeSec/>

@@ -1,11 +1,11 @@
 'use client'
 
 import ProjectDisplay from "../ProjectDisplay";
-import localFont from 'next/font/local'
 import { Anton, Roboto } from "next/font/google"
 import {AiOutlineGithub} from "react-icons/ai"
 import {BsLinkedin} from  "react-icons/bs"
 import BgImage from "../BgImage";
+import localFont from 'next/font/local'
 const blanka = localFont({ src: '../../../public/Blanka.otf' })
 
 const anton = Anton({
@@ -28,19 +28,20 @@ export default function HomeSec(){
       justify-center
       flex-1
       mx-auto
-      ${anton.className}`}>
+      ${anton.className}`}
+    >
       <BgImage/>
       <section className='
-      [max-width:1550px] 
-      ss:h-full 
-      ss:flex-col 
-      sticky 
-      z-10 
-      mx-auto 
-      flex 
-      [padding-top:6rem]
-      justify-between 
-      ss:[padding-top:3rem] 
+        [max-width:1550px] 
+        ss:h-full 
+        ss:flex-col 
+        sticky 
+        z-10 
+        mx-auto 
+        flex 
+        [padding-top:6rem]
+        justify-between 
+        ss:[padding-top:0rem] 
       '>
         <div
           className="
@@ -52,7 +53,7 @@ export default function HomeSec(){
           ml-12 mt-20 
           max-w-112 
           w-1/3
-          ss:w-fit ss:[margin-top:20vh]
+          ss:w-fit ss:[margin-top:4rem]
           md:w-1/2
           ">
           <p className= {`w-fit text-c-orange500 ss:hidden tracking-widest`}>
@@ -65,7 +66,7 @@ export default function HomeSec(){
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec viverra purus. Ut at arcu lacinia, convallis purus, 
           </h5>
         </div>
-        <div className={"right-home mt-8 max-w-140 md:w-fit ss:h-full ss:mr-auto mr-12 z-20"}>
+        <div className={"right-home mt-8 max-w-140 md:w-fit ss:h-full  ss:mr-auto mr-12 z-20"}>
             <ProjectDisplay/>
  
             <div className={" ss:hidden text-white ml-40 z-20 mt-12 sticky"}>
@@ -78,7 +79,7 @@ export default function HomeSec(){
                 <button className={"ml-6"}  onClick={()=>navigator.clipboard.writeText('8.mazakina@gmail.com')} >(11) 99609-2722</button>
               </div>
             </div>
-            <p className= {`w-fit text-c-orange500 text-sm mt-8 mb-1rem mx-auto text-white hidden ss:flex tracking-widest`}>
+            <p className= {`w-fit text-c-orange500 text-sm [margin-top:18rem] mb-1rem mx-auto text-white hidden ss:flex tracking-widest`}>
               Desenvolvedor Front-End | WEB | UI | UX  
             </p>
         </div>
