@@ -26,7 +26,7 @@ export default function Label({img,className='',text}:any){
       className={`item 
       relative 
       ss:[height:96px] ss:[width:330px] ss:[max-width:80vw]
-      ss:mx-auto
+      ss:ml-auto ss:mr-5
       pb-6 ss:pb-0
       ${className}  
       `}

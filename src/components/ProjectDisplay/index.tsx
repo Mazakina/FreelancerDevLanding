@@ -30,7 +30,7 @@ export default function ProjectDisplay(){
         variants={container}
         initial="hidden"
         animate="visible"
-        className=" flex ss:flex-col ss:[width:100vw w-auto">
+        className=" flex ju ss:flex-col ss:[width:100vw] w-auto">
       {
         someArray.map((value,index)=>{
           let text;

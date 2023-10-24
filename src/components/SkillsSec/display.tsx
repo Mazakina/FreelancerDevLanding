@@ -66,12 +66,45 @@ export default function Display(){
   }  
 
   const [current, setCurrent] = useState(0)
-  const hiddenProperties = '-right-full  opacity-0 '
+  const hiddenProperties = '[right:-130%]  opacity-0 '
   return(
-    <div  className="box-border border-2 z-20 rounded-sm border-c-orange500 display w-3/5 mt-16 mx-auto h-120 relative overflow-hidden">
-      <div onClick={onClickChangeDisplayHandler} className={`transition-all duration-700  bg-white absolute h-full w-full `}>
-        <Image height={'480'} width='1440' alt=""  style={{height:'100%',width:'100%',position:'absolute', objectFit:'cover', }} src={Project2.src} />
-        <div className="flex flex-col absolute px-4 right-0 h-full w-1/3 bg-transparent backdrop-blur-sm border-l-2 backdrop-brightness-50">
+    <div 
+    className="box-border border-2 z-20 rounded-sm border-c-orange500 display ss:w-4/5 w-3/5 mt-16 mx-auto h-120 relative overflow-hidden">
+      <div id='overal-display'
+        onClick={onClickChangeDisplayHandler} 
+        className={`transition-all duration-700  
+        bg-white 
+        absolute 
+        h-full w-full 
+        `}>
+        <Image
+          id='project-on-display' 
+          height={'480'} 
+          width='1440' alt="
+          Projeto em destaque
+          "  
+          style={{height:'100%',
+          width:'100%',
+          position:'absolute', 
+          objectFit:'cover', }} 
+          src={Project2.src} 
+          />
+        <div 
+          className={`
+          ${displayOn?'opacity-0':'opacity-100'}
+          transition-all
+          flex 
+          flex-col 
+          absolute px-4 
+          [min-width:260px]
+          right-0 
+          h-full 
+          w-1/3 
+          bg-transparent 
+          backdrop-blur-sm 
+          border-l-2 
+          backdrop-brightness-50`}
+        >
           <h2
             className={`text-white
             text-xl
@@ -96,17 +129,45 @@ export default function Display(){
         </div>
       </div>
 
-      <div onClick={onClickChangeDisplayHandler} className={`${displayOn? ('opacity-1 right-0'): hiddenProperties} transition-all duration-1000 cursor-pointer box-content border-l-2 rounded-sm border-c-orange500 overflow-hidden -skew-x-25 w-4/5 bg-gray-600 absolute h-full `}>
-        
+      <div id='first-project' 
+        onClick={onClickChangeDisplayHandler} 
+        className={`${displayOn? 
+        ('opacity-1 right-0')
+        : hiddenProperties}
+        transition-all 
+        duration-1000 
+        cursor-pointer 
+        box-content 
+        border-l-2 
+        rounded-sm 
+        border-c-orange500 
+        overflow-hidden 
+        -skew-x-25 
+        w-4/5 
+        bg-gray-600 
+        absolute 
+        h-full 
+      `}>
         <Image 
           height={'480'} 
+          style={{
+            transform:"skew(25deg,0) translatex(-150px)",
+            height:'100%',
+            width:'1000px',
+            maxWidth:'1000px',
+            position:'absolute' ,
+            objectPosition:"-20px 0" ,
+            filter:"blur(1px)", 
+            objectFit:'cover' 
+            }}
           width='1440' 
           alt=""  
-          style={{transform:"skew(25deg,0) translatex(-150px)", objectPosition:"60px -60px", filter:"blur(2px)", height:'200%', objectFit:'cover', }} src={FirstImage.src} />
+          src={FirstImage.src} />
         <p
           className={`[writing-mode:vertical-rl]
           [transform:scale(-1)skew(25deg)rotate(25deg)]
           top-40
+          ss:top-52
           text-lg
           skew
           left-3
@@ -118,7 +179,7 @@ export default function Display(){
           font-medium`}>Texto</p>
       </div>
 
-      <div
+      <div id='second-project'
         onClick={onClickChangeDisplayHandler}
         className={`
           ${displayOn?
@@ -139,12 +200,22 @@ export default function Display(){
         <Image 
           height={'480'} 
           width='1440' 
-          alt=""  
-          style={{transform:"skew(25deg,0) translatex(-130px)",height:'100%',width:'1000px',maxWidth:'1000px',position:'absolute' ,objectPosition:"-20px 0" ,filter:"blur(1px)", objectFit:'cover', }} src={Project2.src} />
+          alt="" 
+          style={{
+            transform:"skew(25deg,0) translatex(-130px)",
+            height:'100%',
+            width:'1000px',
+            maxWidth:'1000px',
+            position:'absolute' ,
+            objectPosition:"-20px 0" ,
+            filter:"blur(1px)", 
+            objectFit:'cover' 
+            }} src={Project2.src} />
         <p
           className={`[writing-mode:vertical-rl]
           [transform:scale(-1)skew(25deg)rotate(25deg)]
           top-40
+          ss:top-52
           skew
           left-3
           z-10
@@ -155,11 +226,11 @@ export default function Display(){
           font-medium`}>Texto</p>
       </div>
 
-      <div
+      <div id='third-project'
         onClick={onClickChangeDisplayHandler}
         className={`
         ${displayOn?
-        ('opacity-1 -right-32'):
+        ('opacity-1 [right:-75%]  '):
         hiddenProperties}
         top-0
         transition-all
@@ -171,7 +242,7 @@ export default function Display(){
         border-c-orange500
         overflow-hidden
         -skew-x-25
-        w-1/3
+        w-full
         absolute
         h-full
         `}>
@@ -187,6 +258,7 @@ export default function Display(){
           className={`[writing-mode:vertical-rl] 
           [transform:scale(-1)skew(25deg)rotate(25deg)]
           top-40
+          ss:top-52
           skew
           left-3
           z-10
