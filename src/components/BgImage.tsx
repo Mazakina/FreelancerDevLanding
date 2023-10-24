@@ -1,4 +1,4 @@
-import bgImg from '@images/giphy.gif'
+import bgImg from '@images/giphy4.gif'
 import Image from 'next/image'
 
 export default function BgImage() {
