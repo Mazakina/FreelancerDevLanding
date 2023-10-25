@@ -37,7 +37,7 @@ export default function ProjectDisplay(){
           index===someArray.length-1?
             text='Sobre Mim' : text='Projetos'
           return(
-            <Label className={`${index>1?'ss:hidden md:hidden ':' '}`+ 'ss:mt-5 ml-10'} key={index} img={value} text={text} />
+            <Label className={`${index>1?'ss:hidden md:hidden ':' '}`+ 'ss:mt-5 ss:ml-6 ml-10'} key={index} img={value} text={text} />
           )
         })
       }    

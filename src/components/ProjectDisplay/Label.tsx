@@ -27,7 +27,9 @@ export default function Label({img,className='',text}:any){
       relative 
       ss:[height:96px] ss:[width:330px] ss:[max-width:80vw]
       ss:ml-auto ss:mr-5
+      ss:[filter:drop-shadow(5px_10px_5px_rgba(0,0,0,0.5))]
       pb-6 ss:pb-0
+      
       ${className}  
       `}
       variants={item} 
@@ -42,24 +44,30 @@ export default function Label({img,className='',text}:any){
         [z-index:2]
         clip-path-wide
         mdall:clip-path-height
+        ss:[height:96px] ss:[width:330px] 
+
         '
       />
       <div
-        className='absolute 
+        id='path'
+        className='
+        absolute 
         top-6 hover:top-3 
         [height:442px] [width:96px] 
         cursor-pointer 
         transition-all  
         duration-500 
         ease-in-out
+        ss:scale-90
+
         clip-path-wide
         mdall:clip-path-height
         ss:[height:96px] ss:[width:330px] 
         ss:top-0 
+
         object-cover
         [z-index:2]
         '
-
       >
         <Image
           className="
