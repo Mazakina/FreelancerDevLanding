@@ -25,19 +25,19 @@ export default function ProjectDisplay(){
 
   const someArray = [ProjectOne,ProjectTwo,ProjectThree,ProjectOne]
   return(
-    <div className="relative ss:[width:100vw] ">
+    <div className="relative  md:w-fit ss:[width:100vw] ">
       <motion.ul 
         variants={container}
         initial="hidden"
         animate="visible"
-        className=" flex ju ss:flex-col ss:[width:100vw] w-auto">
+        className=" flex md:justify-center md:[width:300px] ss:flex-col ss:[width:100vw] w-auto">
       {
         someArray.map((value,index)=>{
           let text;
           index===someArray.length-1?
             text='Sobre Mim' : text='Projetos'
           return(
-            <Label className={`${index>1?'ss:hidden md:hidden ':' '}`+ 'ss:mt-5 ss:ml-6 ml-10'} key={index} img={value} text={text} />
+            <Label className={`${index>1?'ss:hidden md:hidden ':' '}`+ 'ss:mt-5  ml-10 ss:ml-6'} key={index} img={value} text={text} />
           )
         })
       }    

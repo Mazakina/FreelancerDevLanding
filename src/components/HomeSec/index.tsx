@@ -40,7 +40,9 @@ export default function HomeSec(){
         mx-auto 
         flex 
         [padding-top:6rem]
-        justify-between 
+        justify-between
+        lg:justify-center
+        xl:justify-center
         ss:[padding-top:0rem] 
       '>
         <div
@@ -54,7 +56,7 @@ export default function HomeSec(){
           max-w-112 
           w-1/3
           ss:w-fit ss:[margin-top:4rem]
-          md:w-1/2
+          md:[min-width:350px]
           ">
           <p className= {`w-fit text-c-orange500 ss:hidden tracking-widest`}>
             Desenvolvedor Front-End | WEB | UI | UX  
