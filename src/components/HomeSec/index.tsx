@@ -58,14 +58,14 @@ export default function HomeSec(){
           ss:w-fit ss:[margin-top:4rem]
           md:[min-width:350px]
           ">
-          <p className= {`w-fit text-c-orange500 ss:hidden tracking-widest`}>
+          <p className= {`w-fit text-c-gray400 ss:hidden tracking-widest`}>
             Desenvolvedor Front-End | WEB | UI | UX  
           </p>
-          <h1 className={`flex text-white ss:text-4xl text-6xl  tracking-wider mt-5 ${roboto.className}`}>
-            Torem ipsum,<br/> dolor sit amet
-          </h1>
-          <h5 className={`flex text-c-gray400 text-right tracking-wider mt-11 ss:hidden`} >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec viverra purus. Ut at arcu lacinia, convallis purus, 
+          <h1 className={`flex text-white ss:text-4xl text-6xl  tracking-wider mt-5 ${blanka.className}`}>
+            PAULO<br/> &nbsp;&nbsp;&nbsp;Mazakina
+          </h1> 
+          <h5 className={`flex max-w-xs ml-14  text-c-orange500 text-right tracking-wider mt-11 ss:hidden`} >
+            Desenvolvendo a arte de contar histórias em cada linha de código
           </h5>
         </div>
         <div className={"right-home mt-8 max-w-140 md:w-fit ss:h-full  ss:mr-auto mr-12 z-20"}>

@@ -83,7 +83,7 @@ export default function SvgOverlay(){
               stroke-width="2"
               vector-effect="non-scaling-stroke"></path>
       </svg>
-      <div className='absolute flex-col justify-center items-center ss:[right:1.5rem] [margin-left:2vw] ss:[margin-top:1820px] [margin-top:2200px] '>
+      <div className='absolute flex-col justify-center items-center ss:[right:1.5rem] [margin-left:2vw] ss:[margin-top:1823px] [margin-top:1823px] '>
         <AboutMeSvg />
         <VerticalDivision height='1300px'/>
       </div>
@@ -94,7 +94,7 @@ export default function SvgOverlay(){
 
 export function ProjectSvg(){
   return(
-    <div className='mt-8 -ml-1 w-0 '>
+    <div className='mt-8 mb-10 -ml-1 w-0 '>
       <div className='w-fit items-center flex flex-row'>
         <div className='hover:brightness-150 transition-all w-7 h-7 relative'>
           <PiAppWindowLight className="absolute text-c-green500 -left-1  text-3xl " />
@@ -109,13 +109,13 @@ export function ProjectSvg(){
 
 export function AboutMeSvg(){
   return(
-    <div className='mt-8 -ml-2 ss:-ml-7 w-0 '>
+    <div className='mt-8 mb-6 -ml-2 ss:-ml-7 w-0 '>
       <div className='w-fit items-center flex flex-row'>
         <BiLeftArrow className="text-c-green500 ss:inline-block hidden  text-xl"/>
         <div className='hover:brightness-150 transition-all w-7 h-7 relative'>
           <LiaUserSolid className="absolute text-c-green500 -left-1 text-3xl " />
-          <div className='absolute bg-c-green500 w-5 h-5 blur-md top-1 left-1' />
-          <div className='absolute bg-c-green500 w-5 h-5 blur-xl top-1 left-1' />
+          <div className='absolute bg-c-green500 w-5 h-5 blur-md top-1 left-0' />
+          <div className='absolute bg-c-green500 w-5 h-5 blur-xl top-1 left-0' />
         </div>
         <BiRightArrow className="text-c-green500 ss:hidden  text-xl"/>
       </div>
