@@ -1,8 +1,8 @@
-import { Anton } from "next/font/google"
+import { Orbitron } from "next/font/google"
 import Division from "../Division";
 import Link from "next/link";
 
-const anton = Anton({
+const orbitron = Orbitron({
   weight:"400",
   subsets:['latin']
 })
@@ -14,7 +14,7 @@ export default function Header({className}:HeaderSiteProps){
   
   return(
     <div className="ss:hidden z-20 text-white absolute -translate-x-1/2 left-1/2">
-      <header  className={`  ${className} ${anton.className} mt-2`  }  >
+      <header  className={`  ${className} ${orbitron.className} mt-2`  }  >
         <Link href="#home" className='ml-10 cursor-pointer' >
           Home
         </Link>  

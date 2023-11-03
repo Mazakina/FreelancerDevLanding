@@ -1,8 +1,10 @@
 'use client'
-import { Anton,Noto_Sans } from "next/font/google"
+import { Orbitron,Noto_Sans } from "next/font/google"
 import { useState } from "react"
+import localFont from 'next/font/local'
+const blanka = localFont({ src: '../../../public/Blanka.otf' })
 
-const anton = Anton({
+const orbitron = Orbitron({
   weight:"400",
   subsets:['latin']
 })
@@ -54,9 +56,9 @@ export default function ContactMeSec(){
     <div id='contact' className= {`max-w-4xl  mx-auto z-20 sticky mt-16 mb-20`}>
       <form method='post' action='contact' onSubmit={submitHandler}>
         <fieldset className="ss:[width:90%] mx-auto flex flex-col justify-center items-center  ">
-          <legend className={`${anton.className} flex justify-center mx-auto text-2xl mb-9`}>Fale Comigo</legend>
+          <legend className={`${blanka.className} flex justify-center mx-auto text-2xl mb-9`}>Fale Comigo</legend>
 
-            <div className={`${anton.className}  w-4/5  ss:flex-col flex justify-center text-base`} >
+            <div className={`${orbitron.className}  w-4/5  ss:flex-col flex justify-center text-base`} >
               <div className=" ss:mx-auto ss:[width:100%] flex flex-col  w-2/5">
                 <label htmlFor="name">Seu nome: *</label>
                 <input
@@ -83,7 +85,7 @@ export default function ContactMeSec(){
                   />
               </div>
             </div>
-            <div className={`${anton.className}  w-4/5  ss:flex-col flex justify-center text-base`} >
+            <div className={`${orbitron.className}  w-4/5  ss:flex-col flex justify-center text-base`} >
               <div className="flex flex-col ss:mx-auto ss:[width:100%] ss:pl-0 w-1/5" >
                 <label htmlFor="telefone">Telefone:</label>
                 <input
@@ -110,7 +112,7 @@ export default function ContactMeSec(){
                   />
               </div>
             </div>
-            <div className={`${anton.className} mx-auto w-4/5 flex flex-col justify-center text-base`}>
+            <div className={`${orbitron.className} mx-auto w-4/5 flex flex-col justify-center text-base`}>
               <label htmlFor="mensagem">Mensagem:</label>
               <textarea
                 required

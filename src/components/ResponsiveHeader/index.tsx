@@ -1,7 +1,7 @@
 'use client'
 
 import localFont from 'next/font/local'
-import { Roboto,Noto_Sans } from "next/font/google"
+import { Orbitron,Noto_Sans } from "next/font/google"
 import Link from 'next/link'
 import { useState } from 'react'
 import {BiHome , BiUserPin , BiMessageAltDetail } from "react-icons/bi"
@@ -11,7 +11,7 @@ import {BsList} from "react-icons/bs"
 
 const blanka = localFont({ src: '../../../public/Blanka.otf' })
 
-const roboto = Roboto({
+const orbitron = Orbitron({
   weight:'700',
   subsets:['latin']
 })
@@ -38,7 +38,7 @@ export default function ResponsiveHeader(){
         </button>
       </header>
       { modal &&
-        <div id="header-overlay " className={`fixed  z-30 backdrop-blur-md text-white  [background-color:#0f13164e]  flex-col top-14 w-full hidden ss:flex [height:100vh] ${roboto.className}`} >
+        <div id="header-overlay " className={`fixed  z-30 backdrop-blur-md text-white  [background-color:#0f13164e]  flex-col top-14 w-full hidden ss:flex [height:100vh] ${orbitron.className}`} >
           <Link href="#home" onClick={modalButtonHandle} className='flex  ml-10 mt-8 text-lg cursor-pointer' >
             <BiHome className='my-auto mr-3 text-2xl text-c-green500'/>  <p className=''>Home</p>
           </Link>

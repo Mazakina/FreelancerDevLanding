@@ -1,15 +1,15 @@
 'use client'
 
 import ProjectDisplay from "../ProjectDisplay";
-import { Anton, Roboto } from "next/font/google"
+import { Orbitron, Roboto } from "next/font/google"
 import {AiOutlineGithub} from "react-icons/ai"
 import {BsLinkedin} from  "react-icons/bs"
 import BgImage from "../BgImage";
 import localFont from 'next/font/local'
 const blanka = localFont({ src: '../../../public/Blanka.otf' })
 
-const anton = Anton({
-  weight:"400",
+const orbitron = Orbitron({
+  weight:"500",
   subsets:['latin']
 })
 
@@ -28,7 +28,7 @@ export default function HomeSec(){
       justify-center
       flex-1
       mx-auto
-      ${anton.className}`}
+      ${orbitron.className}`}
     >
       <BgImage/>
       <section className='
@@ -64,8 +64,8 @@ export default function HomeSec(){
           <h1 className={`flex text-white ss:text-4xl text-6xl  tracking-wider mt-5 ${blanka.className}`}>
             PAULO<br/> &nbsp;&nbsp;&nbsp;Mazakina
           </h1> 
-          <h5 className={`flex max-w-xs ml-14  text-c-orange500 text-right tracking-wider mt-11 ss:hidden`} >
-            Desenvolvendo a arte de contar histórias em cada linha de código
+          <h5 className={`flex max-w-xs ml-14  text-white text-right tracking-widest mt-11 ss:hidden`} >
+          ▓░▓▒▒▒██▓▒▓ ██▒░&gt;░█▒▓ &lt;█▒░██▓▓█
           </h5>
         </div>
         <div className={"right-home mt-8 max-w-140 md:w-fit ss:h-full  ss:mr-auto mr-12 z-20"}>

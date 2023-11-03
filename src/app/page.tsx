@@ -24,7 +24,7 @@ export default async function Home() {
   return (
     <main>
       <section className='relative w-full overflow-hidden' >
-        <SideNav/>
+        {/* <SideNav/> */}
         <SvgOverlay/>
         <Header className="p-auto ml-24 mr-4 z-10"/>
         <ResponsiveHeader/>
