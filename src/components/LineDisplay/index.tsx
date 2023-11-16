@@ -1,18 +1,5 @@
 import Division from "../Division";
-import localFont from 'next/font/local'
-import { Anton, Roboto } from "next/font/google"
-
-const blanka = localFont({ src: '../../public/Blanka.otf' })
-
-const anton = Anton({
-  weight:"400",
-  subsets:['latin']
-})
-
-const roboto = Roboto({
-  weight:"700",
-  subsets:['latin']
-})
+import { blanka, } from "@/app/ui/fonts"
 
 export default function LineDisplay(){
   <div id='' className="flex flex-col align-middle ml-10">

@@ -8,34 +8,35 @@ module.exports = {
   theme: {
     screens: {
       'ss': {'min': '1px', 'max': '767px'},
+      
       'sm': {'min': '640px', 'max': '767px'},
-      // => @media (min-width: 640px and max-width: 767px) { ... }
 
       'md': {'min': '768px', 'max': '1023px'},
+
       'mdall':{'min': '768px'},
-      // => @media (min-width: 768px and max-width: 1023px) { ... }
 
       'lg': {'min': '1024px', 'max': '1279px'},
-      // => @media (min-width: 1024px and max-width: 1279px) { ... }
 
       'xl': {'min': '1280px', 'max': '1535px'},
-      // => @media (min-width: 1280px and max-width: 1535px) { ... }
 
       '2xl': {'min': '1536px'},
-      // => @media (min-width: 1536px) { ... }
     },
     extend: {
       fontFamily:{
         "Anton": "Anton"
       },
       colors:{
+        "c-transparent-green":"#00FFB292",
         "c-gray100": "#E3E3E3",
         "c-gray200": "#6F6F6F",
         "c-gray400": "#8F8F8F",
         "c-gray700": "#2D2D2D",
         "c-gray900": "#141414",
-        "c-orange500": "#FF3D00",
-        "c-green500": "#00E25B",
+        "c-orange500": "#ff8969",
+        // #ff5736
+        // "c-green500": "#00E25B",
+        "c-green500": "#00FFB2",
+        "c-cyan500": "#00FFB2",
         "c-blue800": "#171B26", 
       },
       backgroundImage: {
@@ -50,7 +51,7 @@ module.exports = {
         '8xl':'1440px'
       },
       height:{
-        "screen-1": '800px',
+        "screen-1": '910px',
         "screen-2": '1900px',
         "screen-3": '1240px',
         "120":'480px'

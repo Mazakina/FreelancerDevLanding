@@ -1,10 +1,7 @@
 'use client'
 import Label from "./Label";
-import Boya from '@images/InstcBoya.png'
-import ProjectTwo from '@images/wide2.png'
-import ProjectThree from '@images/project3.png'
-import ProjectOne from '@images/wide1.png'
-// import ProjectOne from '@images/htmlImg1.png'
+import ProjectTwo from '@images/projeto3.png'
+import ProjectOne from '@images/projeto1.png'
 import { motion } from "framer-motion";
 
 export default function ProjectDisplay(){
@@ -19,11 +16,8 @@ export default function ProjectDisplay(){
     }
   };
 
+const someArray = [ProjectOne,ProjectTwo]
 
-
-
-
-  const someArray = [ProjectOne,ProjectTwo,ProjectThree,ProjectOne]
   return(
     <div className="relative  md:w-fit ss:[width:100vw] ">
       <motion.ul 
@@ -37,7 +31,7 @@ export default function ProjectDisplay(){
           index===someArray.length-1?
             text='Sobre Mim' : text='Projetos'
           return(
-            <Label className={`${index>1?'ss:hidden md:hidden ':' '}`+ 'ss:mt-5  ml-10 ss:ml-6'} key={index} img={value} text={text} />
+            <Label className={`${index===0?' ':'ml-[6rem] '}`+ 'ss:mt-5  ml-10 ss:ml-6'} key={index} index={index} img={value} text={text} />
           )
         })
       }    

@@ -1,20 +1,12 @@
 'use client'
-
-import localFont from 'next/font/local'
-import { Orbitron,Noto_Sans } from "next/font/google"
 import Link from 'next/link'
 import { useState } from 'react'
 import {BiHome , BiUserPin , BiMessageAltDetail } from "react-icons/bi"
 import {BsCodeSlash} from "react-icons/bs"
 import {IoArrowBackOutline} from "react-icons/io5"
 import {BsList} from "react-icons/bs"
+import { blanka, orbitron  } from "@/app/ui/fonts"
 
-const blanka = localFont({ src: '../../../public/Blanka.otf' })
-
-const orbitron = Orbitron({
-  weight:'700',
-  subsets:['latin']
-})
 export default function ResponsiveHeader(){
 
   let [modal, setModal] = useState(false)
@@ -25,8 +17,8 @@ export default function ResponsiveHeader(){
   }
   return(
     <>
-      <header className='fixed shadow-md shadow-black z-30 [width:100%] hidden ss:flex bg-c-gray700'>
-        <div className=' h-14 z-40 [width:100%] flex justify-center bg-c-gray700 '>
+      <header className='fixed backdrop-blur-md z-30 [width:100%] hidden ss:flex '>
+        <div className=' h-14 z-40 [width:100%] flex justify-center  '>
           <h2 className={` text-4xl mr-8 text-white ${blanka.className}`}>
             MAZA<span className="text-c-orange500">K</span>INA
           </h2>
