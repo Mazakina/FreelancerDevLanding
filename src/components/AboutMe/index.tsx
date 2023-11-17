@@ -32,6 +32,7 @@ export default function AboutMe(){
             absolute
             mt-4
             opacity-[0.15]
+            ss:opacity-10
             hover:opacity-[0.3]
             transition-all
             '
@@ -88,9 +89,9 @@ export default function AboutMe(){
             absolute
             text-6xl
             ss:text-4xl
+            ss:[max-width:90vw]
             ${blanka.className}
             whitespace-nowrap
-            mx-4
             ss:whitespace-normal
             w-screen
             right-[0%]

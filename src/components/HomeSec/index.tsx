@@ -45,8 +45,7 @@ export default function HomeSec(){
         absolute
         left-[50%]
         -translate-x-1/2
-        md:top-[45%]
-        top-[50%]
+        top-[48%]
         ss:ml-4
         -translate-y-1/2
         flex

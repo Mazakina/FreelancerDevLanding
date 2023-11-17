@@ -66,22 +66,22 @@ export function Card({index,currentActive,title, content,setCurrentActive }:Card
         filter:'brightness(1.5)',
       }}
       className={` 
+      ml-6
       ss:mt-6
       transition-all 
       [transition-duration:.8s] 
       [border-radius:5px] 
       border 
       overflow-hidden 
-      relative 
-      title 
+      relative  
       flex 
       flex-col 
-      ml-6
-      [min-width:76px] 
       ss:w-[320px]
       ss:h-[75px]
+      [min-width:76px] 
       ss:[min-height:75px]
       ss:[max-height:320px]
+      ss:[max-width:80vw]
       hover:border-c-cyan500
       hover:[box-shadow:_0px_0px_8px_3px_#00FFB2;]
         ${active? 
@@ -96,7 +96,7 @@ export function Card({index,currentActive,title, content,setCurrentActive }:Card
         { index===1 && <PiLayoutLight className={iconClass} />}
         { index===2 && <HiOutlineSwatch className={iconClass} />}
         { index===3 && <FaUserAstronaut className={iconClass} />}
-        <div className={`h-8 w-[1px] ml-4 bg-white ${active && 'opacity-0'}`}/>
+        <div className={`h-8 w-[1px] ml-4 bg-white mdall:opacity-0 ${active && 'opacity-0'}`}/>
         <p className={`left-20 absolute transition-all [transition-duration:.8s] whitespace-nowrap  tracking-widest ${active? 'w-fit': 'w-0'}  `}>{title}</p>
       </div>
       <div className={` 
