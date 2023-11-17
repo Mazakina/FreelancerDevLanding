@@ -14,10 +14,10 @@ export default function HomeSec(){
       id='home'
       style={{}}
       className={`
+      relative
       h-screen-1
       top-0
       z-20
-      justify-center
       flex
       flex-col
       flex-1
@@ -29,7 +29,9 @@ export default function HomeSec(){
         z-20
         flex
         justify-center
-        mt-auto
+        mt-32
+        mdall:mt-auto
+        md:mb-[4rem]
         mx-auto
       ">
         <SocialsLink icon='github' href='' />
@@ -43,6 +45,10 @@ export default function HomeSec(){
         absolute
         left-[50%]
         -translate-x-1/2
+        md:top-[45%]
+        top-[50%]
+        ss:ml-4
+        -translate-y-1/2
         flex
         items-center
         flex-col
@@ -51,6 +57,7 @@ export default function HomeSec(){
         <h1
           className={`
           ${alexana.className}
+          ss:text-[40px]
           text-white
           text-[92px]
           tracking-[4.6px]
@@ -62,16 +69,19 @@ export default function HomeSec(){
           ${orbitron.className}
           text-white
           tracking-[1px]
+          ss:text-sm
+          ss:w-60
+          text-center
           `}>
           Desenvolvedor Front-end | UI | UX | WEB
         </p>
       </div>
       <div className='
-        [max-width:50%] 
-        ss:h-full 
         ss:flex-col 
         sticky 
         mx-auto
+        ss:mt-auto
+        w-full
         z-10 
         flex 
         [padding-top:6rem]

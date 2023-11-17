@@ -2,7 +2,7 @@
 
 
 import Link from "next/link"
-import { blanka, anton } from "@/app/ui/fonts"
+import { blanka, anton, orbitron } from "@/app/ui/fonts"
 import Contact from "./Contact"
 
 export default function FooterSec(){
@@ -18,7 +18,7 @@ export default function FooterSec(){
         </p>
         <div className="border ml-6 mr-4 border-white flex-1 " />
       </div>
-      <div className={`${anton.className}  z-30 sticky text-white  flex max-w-4xl mb-20 mt-20 mx-auto justify-around`} >
+      <div className={`z-30  ${orbitron.className}   sticky text-white  flex max-w-4xl mb-20 mt-20 mx-auto justify-around`} >
         <ul>
           <h5 className="text-c-green500 text-lg w-44" >Menu</h5>
           <Contact href='#home' target='_blank'>Home</Contact>

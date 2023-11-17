@@ -5,7 +5,7 @@ import {BiHome , BiUserPin , BiMessageAltDetail } from "react-icons/bi"
 import {BsCodeSlash} from "react-icons/bs"
 import {IoArrowBackOutline} from "react-icons/io5"
 import {BsList} from "react-icons/bs"
-import { blanka, orbitron  } from "@/app/ui/fonts"
+import { orbitron, alexana  } from "@/app/ui/fonts"
 
 export default function ResponsiveHeader(){
 
@@ -17,9 +17,9 @@ export default function ResponsiveHeader(){
   }
   return(
     <>
-      <header className='fixed backdrop-blur-md z-30 [width:100%] hidden ss:flex '>
+      <header className='fixed backdrop-blur-md z-40 [width:100%] hidden ss:flex '>
         <div className=' h-14 z-40 [width:100%] flex justify-center  '>
-          <h2 className={` text-4xl mr-8 text-white ${blanka.className}`}>
+          <h2 className={` text-3xl mt-3  text-white ${alexana.className}`}>
             MAZA<span className="text-c-orange500">K</span>INA
           </h2>
         </div>

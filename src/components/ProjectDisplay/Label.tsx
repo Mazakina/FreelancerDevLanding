@@ -1,10 +1,16 @@
 'use client'
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
+interface Props{
+  img:StaticImageData,
+  className:React.ComponentProps<'div'>['className'],
+  text:string,
+  index:number
+}
 
-export default function Label({img,className='',text,index}:any){
+export default function Label({img,className='',text,index}:Props){
   
   const [isHovering, setIsHovering] = useState(false)
 
@@ -28,25 +34,23 @@ export default function Label({img,className='',text,index}:any){
   },[isHovering])
   return(
     <motion.div
-
       className={`
-      item 
-      clip-path-container
-      rotate-[45deg]
-      relative 
-      ss:[height:96px] ss:[width:330px] ss:[max-width:80vw]
-      ss:ml-auto ss:mr-5
-      ss:[filter:drop-shadow(5px_10px_5px_rgba(0,0,0,0.5))]
-      h-[409px] w-[110px]  
+      ${index===0?' rotate-[-45deg] -scale-x-100 ' :
+      'rotate-[45deg]'
+      }
       ${className}  
+      item 
+      ss:hidden
+      clip-path-tall-frame
+      relative 
+      h-[409px] w-[110px]  
       `}
     >
       <svg
         className={`
         absolute 
-        ss:[height:96px] ss:[width:330px] ss:[max-width:80vw]
         h-[409px] w-[110px] 
-        clip-path-container 
+        clip-path-tall-frame 
         ${isHovering && 
         '[filter:drop-shadow(0px_0px_10px_#00f7ff)]'  
         }
@@ -70,8 +74,8 @@ export default function Label({img,className='',text,index}:any){
         />
         <defs>
           <linearGradient id={"conic-gradient"} gradientTransform="rotate(-45)">
-            <stop offset="0%" stop-color={`rgba(0, 91, 86, 0.67)`} />
-            <stop offset="50.5%" stop-color="#bf0046ab" />
+            <stop offset="0%" stopColor={`rgba(0, 91, 86, 0.67)`} />
+            <stop offset="50.5%" stopColor="#bf0046ab" />
           </linearGradient>
         </defs>
       </svg>
@@ -80,7 +84,7 @@ export default function Label({img,className='',text,index}:any){
         onHoverStart={()=>setIsHovering(true)}
         onHoverEnd={()=>setIsHovering(false)}
         className="
-        clip-path-height
+        clip-path-tall
         absolute
         top-2
         left-2
@@ -103,7 +107,7 @@ export default function Label({img,className='',text,index}:any){
         />
         <div 
         className={`
-          clip-path-height
+          clip-path-tall
           ${isHovering && 'opacity-0'}
           brightness-200
           w-full
@@ -115,14 +119,14 @@ export default function Label({img,className='',text,index}:any){
           z-20
           transition-all
         `}>
-          <p className="
+          <p className={`
           -rotate-[90deg]
+          ${index===0 && '-scale-x-100'}
           whitespace-nowrap
-          ss:[writing-mode:horizontal-tb]
           text-lg
           tracking-widest
-          text-white
-          "
+          text-white`}
+          
           >{text}</p>
         </div>
       </motion.div>
@@ -131,15 +135,4 @@ export default function Label({img,className='',text,index}:any){
 
   )
 }
-// <Image
-// className="
-//   absolute
-//   h-[350px] w-[320px] 
 
-//   [z-index:2]
-//   object-cover
-//   ss:[height:96px] ss:[width:330px] 
-// "
-// src={''}
-// alt=""
-// />

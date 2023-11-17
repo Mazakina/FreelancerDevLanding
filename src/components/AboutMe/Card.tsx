@@ -30,7 +30,7 @@ export function Card({index,currentActive,title, content,setCurrentActive }:Card
   const [scope,animate] = useAnimate()
 
   useEffect(()=>{
-    if(index===0 && active){
+    if(index===2 && active){
       AnimateShow()
     }
   },)
@@ -44,13 +44,13 @@ export function Card({index,currentActive,title, content,setCurrentActive }:Card
 
 
   function AnimateShow(){
-    animate("#vertical-title", {translateY:'300px'})
+    animate("#vertical-title", {y:'300px'})
     animate("#content" , {left:'0',opacity:1},{ease:"easeInOut",duration:1,delay:.5})
 
   }
 
   function animatehide(){
-    animate("#vertical-title", {translateY:'0px'})
+    animate("#vertical-title", {y:'0px'})
     animate("#content" , {left:'-100%',opacity:0},{ease:"easeInOut",duration:.3})
   }
 
@@ -91,7 +91,7 @@ export function Card({index,currentActive,title, content,setCurrentActive }:Card
         <p className={`left-20 absolute transition-all [transition-duration:.8s] whitespace-nowrap  tracking-widest ${active? 'w-fit': 'w-0'}  `}>{title}</p>
       </div>
       <div className={` division z-10  transition-all [transition-duration:.8s] mt-4 [height:1px]  bg-white  rounded-sm ${active? 'ml-4 w-full': '[margin-left:19px] [width:38px]'}   `}/>
-      <h4 id="vertical-title" className={`[writing-mode:vertical-lr]  z-10 m-auto tracking-widest`}
+      <h4 id="vertical-title" className={` [writing-mode:vertical-lr]  z-10 m-auto tracking-widest`}
       >
         {title}
       </h4>

@@ -52,7 +52,7 @@ module.exports = {
       },
       height:{
         "screen-1": '910px',
-        "screen-2": '1900px',
+        "screen-2": '2735px',
         "screen-3": '1240px',
         "120":'480px'
       },

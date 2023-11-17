@@ -69,13 +69,12 @@ export default function Display(){
         ${blanka.className}
         transition-all duration-1000  
         tracking-widest 
-        mt-20 ml-24 mr-auto 
+        mt-[180px] ml-24 mr-auto 
         inline-block text-3xl text-c-gray100
         `}>PROJE<span className='text-c-orange500'>T</span>OS</h4>
       <motion.div 
         ref={ref} 
         id='project-sec'
-
         className={`
         ${isInView ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}
         transition-all duration-1000  
@@ -85,7 +84,6 @@ export default function Display(){
         [box-shadow:_0px_0px_8.4px_2px_#FF3D00;]
         rounded-sm
         border-c-orange500
-        ss:w-4/5 
         w-full 
         mt-16 
         mx-auto 
@@ -274,7 +272,8 @@ export default function Display(){
             className='transform -skew-x-25 translate-x-[-80px] h-[140%] w-[800px] max-w-[800px] absolute object-cover blur-sm"'
             src={Project3.src} />
           <p
-            className={`[writing-mode:vertical-rl] 
+            className={`
+            [writing-mode:vertical-rl] 
             [transform:scale(-1)skew(25deg)rotate(25deg)]
             top-40
             ss:top-52

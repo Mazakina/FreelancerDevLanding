@@ -10,18 +10,13 @@ import { blanka } from '@/app/ui/fonts'
 export default function SvgOverlay(){
   return(
     
-    <div className='relative z-20 [max-width:100vw]'>
-      {/* <div id="circle-one" className=" z-0 w-full ss:hidden [margin-top:440px] absolute [right:-74%]">
-        <div  className=" absolute rounded-full border-2 borcer-c-green500 [width:650px] [height:650px] brightness-150 border-c-green500" />
-        <div  className=" absolute rounded-full border-4 opacity-80 borcer-c-green500 [width:650px] [height:650px] blur-sm border-c-green500" />
-      </div> */}
-      {/* <div  id="circle-two" className="absolute ss:hidden rounded-full border-2 border-c-green500  opacity-30 [right:-11%] [top:100px] [width:600px] [height:600px] " /> */}
-      {/* <div  id="circle-three" className="absolute  ss:hidden [top:2300px] rounded-full border-2 border-c-green500 opacity-70 [right:-11%] [width:600px] [height:600px] " /> */}
-      <div id='right-home-line' className=' ss:hidden absolute [right:1.5vw]'>
+    <div className='relative  z-[30] [max-width:100vw]'>
+      <div id='right-home-line' className=' z-10  ss:hidden absolute [right:1.5vw]'>
         <VerticalDivision height='800px'/>
       </div>
       <div id='left-home-line' 
         className='
+        
         absolute 
         flex-col 
         justify-center 
@@ -38,8 +33,8 @@ export default function SvgOverlay(){
         <div
           className='
           [box-shadow:0px_3px_5px_2px_#00e25a92]
-          [height:373px]
-          ss:[height:325px]
+          [height:470px]
+          ss:[height:470px]
           [width:2px]
           bg-c-green500
           rounded
@@ -60,9 +55,16 @@ export default function SvgOverlay(){
         />
       </div>
       
-      <div className='absolute flex-col justify-center items-center ss:[right:1.5rem] [margin-left:2vw] ss:[margin-top:1800px] [margin-top:1823px] '>
-        <AboutMeSvg />
-        <VerticalDivision height='1300px'/>
+      <div className='
+        absolute 
+        flex-col 
+        justify-center 
+        items-center 
+        ss:[right:1.5rem] 
+        [margin-left:2vw] 
+        ss:[margin-top:1800px] 
+        [margin-top:1823px] 
+        '>
       </div>
     </div>
   )
@@ -86,16 +88,10 @@ export function ProjectSvg(){
 
 export function AboutMeSvg(){
   return(
-    <div className='mt-8 mb-6 -ml-2 ss:-ml-7 w-0 '>
-      <div className='w-fit items-center flex flex-row'>
-        <BiLeftArrow className="text-c-green500 ss:inline-block hidden  text-xl"/>
-        <div className='hover:brightness-150 transition-all w-7 h-7 relative'>
-          <LiaUserSolid className="absolute text-c-green500 -left-1 text-3xl " />
-          <div className='absolute bg-c-green500 w-5 h-5 blur-md top-1 left-0' />
-          <div className='absolute bg-c-green500 w-5 h-5 blur-xl top-1 left-0' />
-        </div>
-        <BiRightArrow className="text-c-green500 ss:hidden  text-xl"/>
-      </div>
+    <div className='hover:brightness-150 transition-all w-7 h-7 relative'>
+      <LiaUserSolid className="absolute text-c-green500 -left-1 text-3xl " />
+      <div className='absolute bg-c-green500 w-5 h-5 blur-md top-1 left-0' />
+      <div className='absolute bg-c-green500 w-5 h-5 blur-xl top-1 left-0' />
     </div>
   )
 }
