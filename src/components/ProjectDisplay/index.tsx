@@ -19,17 +19,12 @@ export default function ProjectDisplay(){
   };
   const seeMore={
     hidden:{
-      translateY:0,
+      y:0,
       opacity:1
     },
     visible:{
-      translateY: 10,
-      transition:{
-        ease:easeInOut,
-        repeat:Infinity,
-        duration:2,
-        repeatType:'mirror',
-      }
+      y: 10,
+
     }
   }
   return(
@@ -56,7 +51,12 @@ export default function ProjectDisplay(){
         variants={seeMore}
         initial="hidden"
         animate="visible"
-
+        transition={{
+          ease:easeInOut,
+          repeat:Infinity,
+          duration:2,
+          repeatType:'mirror',
+        }}
         className='
         ss:hidden
         absolute 
