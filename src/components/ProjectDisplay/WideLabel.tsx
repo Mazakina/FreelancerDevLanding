@@ -10,6 +10,7 @@ export default function WideLabel({img,className='',text,index}:Props){
   const isFirst = index===0
   return(
     <a
+      href={isFirst?'#projects':'#aboutMe'}
       className={`
       ${!isFirst && '-scale-y-100 mt-4 '}
       w-[280px]

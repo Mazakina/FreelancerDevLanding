@@ -16,26 +16,48 @@ export default function AboutMe(){
   
   return(
     <div id='aboutMe' className={`${orbitron.className} z-20 sticky flex justify-center  mx-auto w-full flex-col text-cyan-50 `}>
-      <div className='grid [grid-template-columns:1fr_1fr_215px] gap-20 mx-auto [width:85%] h-120'>
-        <div className='col-span-1 h-full '>
+      <div className='grid 
+        mdall:[grid-template-columns:1fr_1fr_215px] 
+        ss:grid-container-phone
+        mdall:gap-20 
+        mx-auto 
+        [width:85%] 
+        h-fit
+        '
+        >
+        <div className='h-full '>
           <Image
-          className='
-          absolute
-          mt-4
-          opacity-[0.15]
-          hover:opacity-[0.3]
-          transition-all
-          '
-          src={banner}
-          alt=''
+            className='
+            ss:[grid-row:image]
+            absolute
+            mt-4
+            opacity-[0.15]
+            hover:opacity-[0.3]
+            transition-all
+            '
+            src={banner}
+            alt=''
           />
-
         </div>
 
-        <div className='col-span-1 h-full   flex flex-col items-center'>
+        <div className='
+          mdall:col-span-1
+          ss:[grid-row:display]
+          h-full flex  items-center'>
           <div 
-            id='diferenciais-container'
-            className={` ${orbitron.className} container mt-auto mb-12 flex-1 w-[660px] [height:420px] [max-height:420px] flex`}
+            className={` ${orbitron.className} 
+            container 
+            flex
+            ss:flex-col
+            mt-auto 
+            ss:mt-32
+            mb-12 
+            flex-1 
+            w-[660px] 
+            [height:420px]
+            ss:h-[615px] 
+            mdall:[max-height:420px] 
+            `}
             > 
             <Card title={'Clear Code'} content='Durante meu processo foco em códigos limpos e escaláveis, sempre seguindo os bons costumes do mercado.' index={0} currentActive={currentActive} setCurrentActive={setCurrentActive} />
 
@@ -43,18 +65,23 @@ export default function AboutMe(){
 
             <Card title={'Animação'} content='Movimento gera emoção, e animações são uma ferramenta poderosa que eu uso pra guiar e cativar os úsuarios.' index={2} currentActive={currentActive} setCurrentActive={setCurrentActive} />
 
-            <Card title={'Animação'} content='Movimento gera emoção, e animações são uma ferramenta poderosa que eu uso pra guiar e cativar os úsuarios.' index={3} currentActive={currentActive} setCurrentActive={setCurrentActive} />
+            <Card title={'Sobre mim'} content='Movimento gera emoção, e animações são uma ferramenta poderosa que eu uso pra guiar e cativar os úsuarios.' index={3} currentActive={currentActive} setCurrentActive={setCurrentActive} />
 
           </div>
         </div>
         <div className="
-            col-span-1 
+            mdall:col-span-1 
+            ss:[grid-row:frame]
+            ss:ml-auto
+
             ">
           <VerticalDivision height='110px'/>
           <div 
           className='
           relative
           h-[150px]
+          flex
+          items-center
           '
           >
           <h3 className={`
@@ -63,6 +90,7 @@ export default function AboutMe(){
             ss:text-4xl
             ${blanka.className}
             whitespace-nowrap
+            mx-4
             ss:whitespace-normal
             w-screen
             right-[0%]
@@ -87,7 +115,7 @@ export default function AboutMe(){
             -top-72
             tracking-[3px]
             '>
-              <div className='rotate-90 -ml-3'>
+              <div className='rotate-90  -ml-3'>
                 <AboutMeSvg />
               </div>
               <h5

@@ -13,6 +13,7 @@ interface Props{
 export default function Label({img,className='',text,index}:Props){
   
   const [isHovering, setIsHovering] = useState(false)
+  const isFirst = index===0
 
   const item = {
     hidden: { 
@@ -33,9 +34,10 @@ export default function Label({img,className='',text,index}:Props){
     console.log('start')
   },[isHovering])
   return(
-    <motion.div
+    <motion.a
+      href={isFirst?'#projects':'#aboutMe'}
       className={`
-      ${index===0?' rotate-[-45deg] -scale-x-100 ' :
+      ${isFirst?' rotate-[-45deg] -scale-x-100 ' :
       'rotate-[45deg]'
       }
       ${className}  
@@ -121,7 +123,7 @@ export default function Label({img,className='',text,index}:Props){
         `}>
           <p className={`
           -rotate-[90deg]
-          ${index===0 && '-scale-x-100'}
+          ${isFirst && '-scale-x-100'}
           whitespace-nowrap
           text-lg
           tracking-widest
@@ -130,7 +132,7 @@ export default function Label({img,className='',text,index}:Props){
           >{text}</p>
         </div>
       </motion.div>
-    </motion.div>
+    </motion.a>
 
 
   )

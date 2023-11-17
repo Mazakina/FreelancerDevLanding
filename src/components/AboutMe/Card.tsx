@@ -4,6 +4,8 @@ import { Dispatch, SetStateAction, useEffect } from "react";
 import { BsCodeSquare } from "react-icons/bs";
 import { PiLayoutLight } from "react-icons/pi"
 import { HiOutlineSwatch } from "react-icons/hi2"
+import { FaUserAstronaut } from "react-icons/fa6";
+
 import cardOne from "@images/card-1.png"
 import cardTwo from "@images/card-2.jpg"
 import Image from "next/image";
@@ -64,6 +66,7 @@ export function Card({index,currentActive,title, content,setCurrentActive }:Card
         filter:'brightness(1.5)',
       }}
       className={` 
+      ss:mt-6
       transition-all 
       [transition-duration:.8s] 
       [border-radius:5px] 
@@ -73,25 +76,41 @@ export function Card({index,currentActive,title, content,setCurrentActive }:Card
       title 
       flex 
       flex-col 
-      ml-6 
+      ml-6
       [min-width:76px] 
+      ss:w-[320px]
+      ss:h-[75px]
+      ss:[min-height:75px]
+      ss:[max-height:320px]
       hover:border-c-cyan500
       hover:[box-shadow:_0px_0px_8px_3px_#00FFB2;]
         ${active? 
-          'flex-1 [width:76px] border-c-cyan500 [box-shadow:_0px_0px_8px_3px_#00FFB2;]' 
+          'flex-1 [width:76px] ss:w-320 ss:h-[320px] border-c-cyan500 [box-shadow:_0px_0px_8px_3px_#00FFB2;]' 
         : 'border-c-gray200 cursor-pointer [width:76px]'}
       `}
       onClick={handleClick}
       >
       <Image src={srcUrl} alt='' className="absolute  w-full  h-full object-cover brightness-50" />
-      <div className={`flex transition-all [transition-duration:.8s] relative z-10 mt-8 items-center  ${active? 'ml-8': 'ml-5'}`}>
+      <div className={`flex transition-all [transition-duration:.8s] relative z-10 ss:mt-5 mt-8 items-center  ${active? 'ml-8': 'ml-5'}`}>
         { index===0 && <BsCodeSquare className={iconClass} />}
         { index===1 && <PiLayoutLight className={iconClass} />}
         { index===2 && <HiOutlineSwatch className={iconClass} />}
+        { index===3 && <FaUserAstronaut className={iconClass} />}
+        <div className={`h-8 w-[1px] ml-4 bg-white ${active && 'opacity-0'}`}/>
         <p className={`left-20 absolute transition-all [transition-duration:.8s] whitespace-nowrap  tracking-widest ${active? 'w-fit': 'w-0'}  `}>{title}</p>
       </div>
-      <div className={` division z-10  transition-all [transition-duration:.8s] mt-4 [height:1px]  bg-white  rounded-sm ${active? 'ml-4 w-full': '[margin-left:19px] [width:38px]'}   `}/>
-      <h4 id="vertical-title" className={` [writing-mode:vertical-lr]  z-10 m-auto tracking-widest`}
+      <div className={` 
+        division 
+        ss:opacity-0
+        z-10  
+        transition-all [transition-duration:.8s] 
+        mt-4 
+        [height:1px]  
+        bg-white  
+        rounded-sm 
+        ${active? 'ml-4 w-full ss:opacity-100': '[margin-left:19px] [width:38px]'}   `}
+      />
+      <h4 id="vertical-title" className={`ss:hidden [writing-mode:vertical-lr]  z-10 m-auto tracking-widest`}
       >
         {title}
       </h4>

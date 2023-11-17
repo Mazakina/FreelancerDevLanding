@@ -64,7 +64,9 @@ export default function Display(){
   const hiddenProperties = '[right:-130%]  opacity-0 '
   return(
     <>
-      <h4 className={` 
+      <h4 
+        id='projects'
+        className={` 
         ${isInView ? "translate-x-0 opacity-100" : "-translate-x-16 opacity-0"}
         ${blanka.className}
         transition-all duration-1000  

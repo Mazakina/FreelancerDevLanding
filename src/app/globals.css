@@ -58,6 +58,11 @@ body {
 }
 @layer utilities {
 
+  .grid-container-phone {
+    display: grid;
+    grid-template-rows: [image] 0px [frame] 1fr [display] 615px;
+  }
+
   .clip-path-tall {
 
     clip-path:path("M0.00030913 393L0.000309124 37.5256L37.5258 0.000171304L94 0.00012207L94.0003 355.175L56.1755 393H0.00030913C-0.000386412 391.5 0.00030913 395.209 0.00030913 393Z")
