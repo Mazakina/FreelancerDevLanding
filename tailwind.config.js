@@ -11,11 +11,13 @@ module.exports = {
       
       'sm': {'min': '640px', 'max': '767px'},
 
-      'md': {'min': '768px', 'max': '1023px'},
+      'up-to-md':{'min': '1px', 'max': '1140px'},
+
+      'md': {'min': '768px', 'max': '1140px'},
 
       'mdall':{'min': '768px'},
 
-      'lg': {'min': '1024px', 'max': '1279px'},
+      'lg-all': {'min': '1140px'},
 
       'xl': {'min': '1280px', 'max': '1535px'},
 

@@ -49,24 +49,26 @@ export default function AboutMe(){
             className={` ${orbitron.className} 
             container 
             flex
-            ss:flex-col
             mt-auto 
-            ss:mt-32
             mb-12 
+            md:mb-0
             flex-1 
-            w-[660px] 
+            md:w-[350px]
+            lg-all:w-[660px] 
             [height:420px]
-            ss:h-[615px] 
-            mdall:[max-height:420px] 
+            ss:mt-32 
+            up-to-md:h-[615px]
+            up-to-md:flex-col
+            lg-all:[max-height:420px] 
             `}
             > 
-            <Card title={'Clear Code'} content='Durante meu processo foco em códigos limpos e escaláveis, sempre seguindo os bons costumes do mercado.' index={0} currentActive={currentActive} setCurrentActive={setCurrentActive} />
+            <Card title={'Clear Code'} content=' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, sapiente?' index={0} currentActive={currentActive} setCurrentActive={setCurrentActive} />
 
-            <Card title={'Alta Fidelidade'} content='' index={1} currentActive={currentActive} setCurrentActive={setCurrentActive} />
+            <Card title={'Alta Fidelidade'} content='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, sapiente?' index={1} currentActive={currentActive} setCurrentActive={setCurrentActive} />
 
-            <Card title={'Animação'} content='Movimento gera emoção, e animações são uma ferramenta poderosa que eu uso pra guiar e cativar os úsuarios.' index={2} currentActive={currentActive} setCurrentActive={setCurrentActive} />
+            <Card title={'Animação'} content='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, sapiente?.' index={2} currentActive={currentActive} setCurrentActive={setCurrentActive} />
 
-            <Card title={'Sobre mim'} content='Movimento gera emoção, e animações são uma ferramenta poderosa que eu uso pra guiar e cativar os úsuarios.' index={3} currentActive={currentActive} setCurrentActive={setCurrentActive} />
+            <Card title={'Sobre mim'} content='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, sapiente?.' index={3} currentActive={currentActive} setCurrentActive={setCurrentActive} />
 
           </div>
         </div>
@@ -92,12 +94,12 @@ export default function AboutMe(){
             ss:[max-width:90vw]
             ${blanka.className}
             whitespace-nowrap
-            ss:whitespace-normal
+            up-to-md:whitespace-normal
             w-screen
             right-[0%]
             text-right
             `}>
-            Um trabalho que  fala mais <br className='ss:hidden'/> do que palavras
+            Lorem ipsum dolor sit amet. <br className='ss:hidden'/> Lorem, dolor.
           </h3>
           </div>
           <VerticalDivision height='680px'/>
@@ -129,7 +131,13 @@ export default function AboutMe(){
                 S<span className='text-c-orange500'>o</span>bre Mim
               </h5>
             </div>
-            <Image className='object-cover ss:w-[175px] ss:min-h-[350px] w-[215px] h-[520px]' src={portrait.src} alt='portrait' fill />
+            <Image className='
+            object-cover 
+            ss:w-[175px] 
+            ss:min-h-[350px] 
+            w-[215px] 
+            h-[520px]' 
+            src={portrait.src} alt='portrait' fill />
           </div>
         </div>
       </div>

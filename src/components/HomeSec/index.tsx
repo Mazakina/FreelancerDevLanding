@@ -34,8 +34,8 @@ export default function HomeSec(){
         md:mb-[4rem]
         mx-auto
       ">
-        <SocialsLink icon='github' href='' />
-        <SocialsLink icon='linkedin' href='' />
+        <SocialsLink icon='github' href='https://github.com/Mazakina' />
+        <SocialsLink icon='linkedin' href='https://www.linkedin.com/in/paulo-mazakina-1236811b4/' />
         <SocialsLink icon='phone' href='' />
       </div>
       <div

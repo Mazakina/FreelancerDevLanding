@@ -21,16 +21,16 @@ export default function FooterSec(){
       <div className={`z-30  ${orbitron.className}   sticky text-white  flex max-w-4xl mb-20 mt-20 mx-auto justify-around`} >
         <ul>
           <h5 className="text-c-green500 text-lg w-44" >Menu</h5>
-          <Contact href='#home' target='_blank'>Home</Contact>
-          <Contact href='#skills' target='_blank'>Portfolio</Contact>
-          <Contact href='#aboutMe' target='_blank'>Sobre Mim</Contact>
-          <Contact href='#contact' target='_blank'>FaleComigo</Contact>
+          <Contact href='#home' >Home</Contact>
+          <Contact href='#skills'>Portfolio</Contact>
+          <Contact href='#aboutMe'>Sobre Mim</Contact>
+          <Contact href='#contact'>FaleComigo</Contact>
         </ul>
         <ul className="w-44">
           <h5 className="text-c-green500 text-lg" >Redes Sociais</h5>
-          <Contact href='https://www.instagram.com/mazakina_/'>Instagram</Contact>
-          <Contact href='https://www.linkedin.com/in/paulo-mazakina-1236811b4/'>LinkedIn</Contact>
-          <Contact href='https://github.com/Mazakina'>GitHub</Contact>
+          <Contact target="_blank" href='https://www.instagram.com/mazakina_/'>Instagram</Contact>
+          <Contact target="_blank" href='https://www.linkedin.com/in/paulo-mazakina-1236811b4/'>LinkedIn</Contact>
+          <Contact target="_blank" href='https://github.com/Mazakina'>GitHub</Contact>
           <li className='mt-4 hover:ml-3 transition-all duration-500 relative'>
             <button onClick={()=>navigator.clipboard.writeText('8.mazakina@gmail.com')} >
               8.mazakina@gmail.com

@@ -9,7 +9,7 @@ interface Props{
 
 export default function SocialsLink({href , icon}:Props){
   return(
-    <Link className="w-[120px] flex  justify-around mb-16" href={href}>
+    <Link className="w-fit flex mx-10  justify-around mb-16" target="_blank" href={href}>
       {
         icon==='linkedin' && <AiOutlineLinkedin   className="
         text-white

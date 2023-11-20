@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { roboto, orbitron, blanka } from "@/app/ui/fonts"
 import { motion, useInView } from 'framer-motion'
+import { FaFigma, FaGithub } from 'react-icons/fa'
 
 export default function Display(){
   const allProjects = [
@@ -19,6 +20,7 @@ export default function Display(){
       language:'HTML & CSS',
       site:'/#',
       github:'https://github.com/Mazakina/PersonalWeb',
+      figma:'',
       description:' Projeto em React e Next Js, utiliziando Api de Framer Motion para criar transições simples. Um trabalho sempre em desenvolvimento',
     },{
       id:1,
@@ -30,6 +32,7 @@ export default function Display(){
       description:'Space Travel é um site informativo, feito para saciar algumas curiosidade dos amantes do espaço. Utilizando os fundamentos, sem framework, apenas HTML/CSS para criar uma experiencia responsiva e otimizada',
       site:'https://uss-enterprise.vercel.app/',
       github:'https://github.com/Mazakina/UssEnterprise',
+      figma:'',
   },{
       id:2,
       backgroundImg:'/images/Rect1.png',
@@ -38,7 +41,8 @@ export default function Display(){
       language: 'Next JS',
       site:'https://ignite-ig-news-main.vercel.app/',
       github:'https://github.com/Mazakina/Ignite-IgNews-main',
-      description:' Trabalho em Next Js para entrega de conteudo DEV com preview antes de se inscrever. Criado com Stripe para pagamentos, Next Auth para validação, e Prismic como CMS '
+      description:' Trabalho em Next Js para entrega de conteudo DEV com preview antes de se inscrever. Criado com Stripe para pagamentos, Next Auth para validação, e Prismic como CMS ',
+      figma:'',
   },{
       id:3,
       backgroundImg:'/images/projeto2.png',
@@ -48,6 +52,7 @@ export default function Display(){
       site:'https://inktrail.vercel.app/',
       github:'https://github.com/Mazakina/ArtMatch',
       description:`Aplicativo JAM-Stack, feito para que artistas brasileiros divulguem suas artes e possiveis clientes entrem em contato. Utilizando de um layout interativo onde se pode arrastar imagens para dentro de albums ou serem deletadas`,
+      figma:'',
   }]
 
   const ref = useRef(null)
@@ -93,13 +98,13 @@ export default function Display(){
         relative 
         overflow-hidden`}>
         <div id='overal-display'
-          onClick={onClickChangeDisplayHandler} 
           className={`transition-all duration-700  
           absolute 
           h-full w-full 
           `}>
           <Image
-            className='brightness-50'
+            onClick={onClickChangeDisplayHandler} 
+            className=''
             id='project-on-display' 
             height={'480'} 
             width='1440' alt="
@@ -112,43 +117,74 @@ export default function Display(){
             src={Project2.src} 
             />
           <div 
+            onClick={(e)=>{e.stopPropagation()}}
             className={`
             ${displayOn?'opacity-0':'opacity-100'}
             [transition:all_1300ms_ease-in-out]
             flex 
+            backdrop-blur-2xl
+            border-l
+            border-[#ffffff38]
             flex-col 
-            absolute px-4 
+            absolute 
             [min-width:260px]
             right-0 
             h-full 
-            w-1/3 
-            bg-transparent 
-            `}
+            w-2/5 
+            bg-[conic-gradient(from_90deg_at_1px_1px,#0000_90deg,blue_0)_0_0/50px_50px;] 
+              `}
           >
-            <h2
+            <div
               className={`
-              text-white
-              text-xl
-              ${orbitron.className}
-              mr-auto
-              mt-6`
-            }>{allProjects[current].title}</h2>
+                mx-24
+                mt-6
+                mr-auto
+                items-center
+                flex
+              `}
+              >
+                <Image src={''} className='h-16 mr-4 w-16 rounded-full' alt=''/ >
+              <h2
+                className={`
+                text-white
+                text-xl
+                ${orbitron.className}
+                `
+              }>
+                {allProjects[current].title}
+              </h2>
+            </div>
             <p
               className={`
               text-gray-300
               text-base
               ${roboto.className}
               mx-auto
+              ml-16
+              mr-8 
               mt-6`
               }>
               {allProjects[current].description}
             </p>
             <div className={'flex justify-around font-bold text-white mt-auto mb-10'}>
-            <Link
-              href={allProjects[current].github}
-              className={'flex justify-center  w-24 border-b-2 p-2 rounded-sm hover:border-c-orange500 '}>
-              GitHub</Link>
-              <Link href={allProjects[current].site} className={' border-b-2 flex justify-center  w-24   p-2 rounded-sm hover:border-c-orange500'}> Visitar </Link>
+              <Link 
+                href={allProjects[current].site} 
+                className={' border-b-2 flex justify-center  w-24  transition-all duration-500  p-2 rounded-sm hover:border-c-green500'}> 
+                Visitar 
+              </Link>
+              <div className='flex'>
+                <Link
+                  href={allProjects[current].github}
+                  className={'flex mr-12 justify-center  border-4 border-white transition-all duration-500  rounded-full hover:border-c-green500 '}>
+                  <FaGithub className={'w-9 border-transparent border h-9'} />
+                </Link>
+                <Link
+                  href={allProjects[current].figma}
+                  className={'flex justify-center  items-center  border-4 border-white transition-all duration-500  rounded-full hover:border-c-green500 '}>
+                  <FaFigma className={' bg-white border-black border-2 rounded-full text-black w-9 h-9 p-1'} />
+                </Link>
+              </div>
+
             </div>
           </div>
         </div>
@@ -185,7 +221,7 @@ export default function Display(){
               }}
             width='1440' 
             alt=""  
-            src={FirstImage.src} />
+            src={Project3.src} />
           <p
             className={`[writing-mode:vertical-rl]
             [transform:scale(-1)skew(25deg)rotate(25deg)]
@@ -199,7 +235,7 @@ export default function Display(){
             bg-transparent
             absolute
             ${orbitron.className}
-            font-medium`}>Texto</p>
+            font-medium`}>{allProjects[3].title}</p>
         </div>
 
         <div id='second-project'
@@ -245,7 +281,7 @@ export default function Display(){
             text-white
             absolute
             ${orbitron.className}
-            font-medium`}>Texto</p>
+            font-medium`}>{allProjects[2].title}</p>
         </div>
 
         <div id='third-project'
@@ -271,8 +307,17 @@ export default function Display(){
             height={'480'}
             width='1440'
             alt=""
-            className='transform -skew-x-25 translate-x-[-80px] h-[140%] w-[800px] max-w-[800px] absolute object-cover blur-sm"'
-            src={Project3.src} />
+            className='
+            
+            transform 
+            skew-x-25 
+            translate-x-[-80px] 
+            h-[140%] w-[800px] 
+            max-w-[800px] 
+            absolute 
+            object-cover 
+            blur-sm"'
+            src={FirstImage.src} />
           <p
             className={`
             [writing-mode:vertical-rl] 
@@ -286,7 +331,7 @@ export default function Display(){
             text-lg
             absolute
             ${orbitron.className}
-            font-medium`}>Texto</p>
+            font-medium`}>{allProjects[1].title}</p>
         </div>
       </motion.div>
     </>

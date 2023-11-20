@@ -8,7 +8,7 @@ export default async function List(){
     <div className="flex flex-nowrap [height:60px] [width:640px]">
       {files.map((icon:any)  =>{
         return(
-          <Image className=" hover:scale-110 ml-5" rel='icon'  key={icon} width={60} height={60} src={'/slideIcons/'+icon} alt={icon}/>
+          <Image className=" hover:scale-125 transition-all [transition-duration:500ms] ml-5" rel='icon'  key={icon} width={60} height={60} src={'/slideIcons/'+icon} alt={icon}/>
         )
       })}
     </div>
