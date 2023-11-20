@@ -2,7 +2,8 @@
 
 import FirstImage from '@images/htmlImgWebp.webp'
 import Project2 from '@images/Rect1.png'
-import Project3 from '@images/projeto2 copy.png'
+import Project3 from '@images/projeto2.png'
+import M from '@images/M.png'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
@@ -14,7 +15,7 @@ export default function Display(){
   const allProjects = [
     {
       id:0,
-      backgroundImg:'/images/projeto1.png',
+      backgroundImg:Project2.src,
       tools:['reactJs','html'],
       title:'Portfolio',
       language:'HTML & CSS',
@@ -24,8 +25,7 @@ export default function Display(){
       description:' Projeto em React e Next Js, utiliziando Api de Framer Motion para criar transições simples. Um trabalho sempre em desenvolvimento',
     },{
       id:1,
-      backgroundImgWebp:'/images/htmlImgWebp.webp',
-      backgroundImg:'/images/htmlImg.png',
+      backgroundImg:Project3.src,
       tools:['html'],
       title:'Space Travel',
       language:'HTML & CSS',
@@ -35,7 +35,7 @@ export default function Display(){
       figma:'',
   },{
       id:2,
-      backgroundImg:'/images/Rect1.png',
+      backgroundImg:Project2.src,
       tools:['nextJs','reactJs','stripe','prismic','html'],
       title:'IgNews',
       language: 'Next JS',
@@ -45,7 +45,7 @@ export default function Display(){
       figma:'',
   },{
       id:3,
-      backgroundImg:'/images/projeto2.png',
+      backgroundImg:FirstImage.src,
       tools:['reactJs','nextJs','prismic','html'],
       title:'Ink-Trail',
       language: 'React JS',
@@ -61,7 +61,8 @@ export default function Display(){
   })
   let [displayOn, setDisplayOn] = useState(true)
 
-  function onClickChangeDisplayHandler(){
+  function onClickChangeDisplayHandler(num:number){
+    setCurrent(num)
     setDisplayOn(!displayOn)
   }  
 
@@ -102,9 +103,14 @@ export default function Display(){
           absolute 
           h-full w-full 
           `}>
-          <Image
-            onClick={onClickChangeDisplayHandler} 
-            className=''
+            <Image
+            onClick={()=>onClickChangeDisplayHandler(0)} 
+            className={`
+            opacity-0
+            transition-all
+            duration-1000
+            ${displayOn && 'opacity-100'}
+            `}
             id='project-on-display' 
             height={'480'} 
             width='1440' alt="
@@ -114,8 +120,28 @@ export default function Display(){
             width:'100%',
             position:'absolute', 
             objectFit:'cover', }} 
-            src={Project2.src} 
+            src={allProjects[0].backgroundImg} 
             />
+                        <Image
+            onClick={()=>onClickChangeDisplayHandler(0)} 
+            className={`
+            opacity-100
+            transition-all
+            duration-1000
+            ${displayOn && 'opacity-0'}
+            `}
+            id='project-on-display' 
+            height={'480'} 
+            width='1440' alt="
+            Projeto em destaque
+            "  
+            style={{height:'100%',
+            width:'100%',
+            position:'absolute', 
+            objectFit:'cover', }} 
+            src={allProjects[current].backgroundImg} 
+            />
+
           <div 
             onClick={(e)=>{e.stopPropagation()}}
             className={`
@@ -143,7 +169,7 @@ export default function Display(){
                 flex
               `}
               >
-                <Image src={''} className='h-16 mr-4 w-16 rounded-full' alt=''/ >
+                <Image src={M.src} className='h-16 mr-4 w-16 rounded-full' width={64} height={64} alt=''/ >
               <h2
                 className={`
                 text-white
@@ -215,7 +241,7 @@ export default function Display(){
         </div>
 
         <div id='first-project' 
-          onClick={onClickChangeDisplayHandler} 
+          onClick={()=>onClickChangeDisplayHandler(1)} 
           className={`${displayOn? 
           ('opacity-1 right-0  border-c-orange500 [box-shadow:_0px_0px_8.4px_2px_#FF3D00;] ')
           : hiddenProperties}
@@ -264,7 +290,7 @@ export default function Display(){
         </div>
 
         <div id='second-project'
-          onClick={onClickChangeDisplayHandler}
+          onClick={()=>onClickChangeDisplayHandler(2)}
           className={`
             ${displayOn?
             ('opacity-1 right-4  border-c-orange500 [box-shadow:_0px_0px_8.4px_2px_#FF3D00;] '):
@@ -310,7 +336,7 @@ export default function Display(){
         </div>
 
         <div id='third-project'
-          onClick={onClickChangeDisplayHandler}
+          onClick={()=>onClickChangeDisplayHandler(3)}
           className={`
           ${displayOn?
           ("opacity-1 [right:-75%] border-c-orange500 [box-shadow:_0px_0px_8.4px_2px_#FF3D00;] "):
