@@ -169,18 +169,43 @@ export default function Display(){
             <div className={'flex justify-around font-bold text-white mt-auto mb-10'}>
               <Link 
                 href={allProjects[current].site} 
-                className={' border-b-2 flex justify-center  w-24  transition-all duration-500  p-2 rounded-sm hover:border-c-green500'}> 
+                className={` 
+                border-b-2 
+                flex 
+                justify-center  
+                w-24  
+                transition-all 
+                duration-500  p-2 rounded-sm 
+                hover:border-c-green500
+                `}> 
                 Visitar 
               </Link>
               <div className='flex'>
                 <Link
                   href={allProjects[current].github}
-                  className={'flex mr-12 justify-center  border-4 border-white transition-all duration-500  rounded-full hover:border-c-green500 '}>
+                  className='
+                  flex 
+                  mr-12 
+                  justify-center  
+                  border-4 
+                  border-white 
+                  transition-all 
+                  duration-500  
+                  rounded-full 
+                  hover:border-c-green500 '>
                   <FaGithub className={'w-9 border-transparent border h-9'} />
                 </Link>
                 <Link
                   href={allProjects[current].figma}
-                  className={'flex justify-center  items-center  border-4 border-white transition-all duration-500  rounded-full hover:border-c-green500 '}>
+                  className='
+                  flex 
+                  justify-center  
+                  items-center  
+                  border-4 
+                  border-white 
+                  transition-all 
+                  duration-500  
+                  rounded-full hover:border-c-green500 '>
                   <FaFigma className={' bg-white border-black border-2 rounded-full text-black w-9 h-9 p-1'} />
                 </Link>
               </div>
