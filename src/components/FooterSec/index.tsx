@@ -1,9 +1,6 @@
-'use client'
-
-
-import Link from "next/link"
-import { blanka, anton, orbitron } from "@/app/ui/fonts"
+import { blanka, orbitron } from "@/app/ui/fonts"
 import Contact from "./Contact"
+import { PhoneContact } from "./PhoneContact"
 
 export default function FooterSec(){
   return(
@@ -22,20 +19,16 @@ export default function FooterSec(){
         <ul>
           <h5 className="text-c-green500 text-lg w-44" >Menu</h5>
           <Contact href='#home' >Home</Contact>
-          <Contact href='#skills'>Portfolio</Contact>
-          <Contact href='#aboutMe'>Sobre Mim</Contact>
+          <Contact href='#projects'>Portfolio</Contact>
+          <Contact href='#about-me'>Sobre Mim</Contact>
           <Contact href='#contact'>FaleComigo</Contact>
         </ul>
         <ul className="w-44">
-          <h5 className="text-c-green500 text-lg" >Redes Sociais</h5>
+          <h5 className="text-c-green500 whitespace-nowrap text-lg" >Redes Sociais</h5>
           <Contact target="_blank" href='https://www.instagram.com/mazakina_/'>Instagram</Contact>
           <Contact target="_blank" href='https://www.linkedin.com/in/paulo-mazakina-1236811b4/'>LinkedIn</Contact>
           <Contact target="_blank" href='https://github.com/Mazakina'>GitHub</Contact>
-          <li className='mt-4 hover:ml-3 transition-all duration-500 relative'>
-            <button onClick={()=>navigator.clipboard.writeText('8.mazakina@gmail.com')} >
-              8.mazakina@gmail.com
-            </button>
-          </li>
+          <PhoneContact />
         </ul>
       </div>
     </footer>

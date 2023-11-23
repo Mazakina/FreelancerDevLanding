@@ -5,7 +5,6 @@ import banner from '@images/Long-banner.png'
 import Image from "next/image"
 import {useState} from 'react'
 import { Card } from "./Card"
-
 import { orbitron , blanka } from "@/app/ui/fonts"
 import { AboutMeSvg, VerticalDivision } from '../SvgOverlay'
 
@@ -15,7 +14,7 @@ export default function AboutMe(){
   const [currentActive, setCurrentActive] = useState<number>(3)
   
   return(
-    <div id='aboutMe' className={`${orbitron.className} z-20 sticky flex justify-center  mx-auto w-full flex-col text-cyan-50 `}>
+    <div  className={`${orbitron.className} z-20 sticky flex justify-center  mx-auto w-full flex-col text-cyan-50 `}>
       <div className='grid 
         mdall:[grid-template-columns:1fr_1fr_215px] 
         ss:grid-container-phone
@@ -46,6 +45,7 @@ export default function AboutMe(){
           ss:[grid-row:display]
           h-full flex  items-center'>
           <div 
+          
             className={` ${orbitron.className} 
             container 
             flex
@@ -91,11 +91,10 @@ export default function AboutMe(){
             absolute
             text-6xl
             ss:text-4xl
-            ss:[max-width:90vw]
+            [max-width:90vw]
             ${blanka.className}
-            whitespace-nowrap
-            up-to-md:whitespace-normal
             w-screen
+            text-white
             right-[0%]
             text-right
             `}>
@@ -103,7 +102,9 @@ export default function AboutMe(){
           </h3>
           </div>
           <VerticalDivision height='680px'/>
-          <div className='
+          <div
+            id='about-me' 
+            className='
             rounded-md 
             flex 
             relative

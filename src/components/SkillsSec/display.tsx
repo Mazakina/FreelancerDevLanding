@@ -5,11 +5,12 @@ import Project2 from '@images/Rect1.png'
 import Project3 from '@images/projeto2.png'
 import M from '@images/M.png'
 import Image from 'next/image'
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import Link from 'next/link'
 import { roboto, orbitron, blanka } from "@/app/ui/fonts"
 import { motion, useInView } from 'framer-motion'
-import { FaFigma, FaGithub } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
+import { PiFigmaLogoBold } from 'react-icons/pi'
 
 export default function Display(){
   const allProjects = [
@@ -86,6 +87,7 @@ export default function Display(){
         className={`
         ${isInView ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}
         transition-all duration-1000  
+        ${orbitron.className}
         box-border 
         border-t-2
         border-b-2
@@ -104,42 +106,42 @@ export default function Display(){
           h-full w-full 
           `}>
             <Image
-            onClick={()=>onClickChangeDisplayHandler(0)} 
-            className={`
-            opacity-0
-            transition-all
-            duration-1000
-            ${displayOn && 'opacity-100'}
-            `}
-            id='project-on-display' 
-            height={'480'} 
-            width='1440' alt="
-            Projeto em destaque
-            "  
-            style={{height:'100%',
-            width:'100%',
-            position:'absolute', 
-            objectFit:'cover', }} 
-            src={allProjects[0].backgroundImg} 
+              onClick={()=>onClickChangeDisplayHandler(0)} 
+              className={`
+              transition-all
+              duration-500
+              h-full
+              w-full
+              absolute
+              object-cover           
+              ${!displayOn? 'opacity-100': 'opacity-0'}
+              `}
+              height={'480'} 
+              width='1440' alt="
+              Projeto em destaque
+              "  
+              src={allProjects[current].backgroundImg} 
             />
-                        <Image
-            onClick={()=>onClickChangeDisplayHandler(0)} 
-            className={`
-            opacity-100
-            transition-all
-            duration-1000
-            ${displayOn && 'opacity-0'}
-            `}
-            id='project-on-display' 
-            height={'480'} 
-            width='1440' alt="
-            Projeto em destaque
-            "  
-            style={{height:'100%',
-            width:'100%',
-            position:'absolute', 
-            objectFit:'cover', }} 
-            src={allProjects[current].backgroundImg} 
+            <Image
+              onClick={()=>onClickChangeDisplayHandler(0)} 
+              className={`
+              h-full
+              w-full
+              absolute
+              blur-xl
+              brightness-50
+              hover:brightness-100
+              hover:blur-none
+              object-cover
+              transition-all
+              duration-500
+              ${displayOn? 'opacity-100': 'opacity-0'}
+              `}
+              height={'480'} 
+              width='1440' alt="
+              primeiro projeto
+              "  
+              src={allProjects[0].backgroundImg} 
             />
 
           <div 
@@ -163,18 +165,21 @@ export default function Display(){
             <div
               className={`
                 mx-24
+                transition-all
+                duration-700
                 mt-6
                 mr-auto
                 items-center
                 flex
               `}
               >
-                <Image src={M.src} className='h-16 mr-4 w-16 rounded-full' width={64} height={64} alt=''/ >
+                <Image src={M.src} className='
+                  transition-all
+                  duration-700 h-16 mr-4 w-16 rounded-full' width={64} height={64} alt=''/ >
               <h2
                 className={`
                 text-white
                 text-xl
-                ${orbitron.className}
                 `
               }>
                 {allProjects[current].title}
@@ -184,7 +189,8 @@ export default function Display(){
               className={`
               text-gray-300
               text-base
-              ${roboto.className}
+              transition-all
+              duration-500
               mx-auto
               ml-16
               mr-8 
@@ -199,12 +205,13 @@ export default function Display(){
                 border-b-2 
                 flex 
                 justify-center  
+                whitespace-nowrap
                 w-24  
                 transition-all 
-                duration-500  p-2 rounded-sm 
+                duration-300  p-2 rounded-sm 
                 hover:border-c-green500
                 `}> 
-                Visitar 
+                Visitar &gt; 
               </Link>
               <div className='flex'>
                 <Link
@@ -212,12 +219,14 @@ export default function Display(){
                   className='
                   flex 
                   mr-12 
+                  h-fit
                   justify-center  
                   border-4 
                   border-white 
                   transition-all 
-                  duration-500  
+                  duration-300  
                   rounded-full 
+                  hover:[filter:drop-shadow(0px_0px_15px_#2ff8ff)]
                   hover:border-c-green500 '>
                   <FaGithub className={'w-9 border-transparent border h-9'} />
                 </Link>
@@ -227,12 +236,14 @@ export default function Display(){
                   flex 
                   justify-center  
                   items-center  
+                  h-fit
                   border-4 
                   border-white 
                   transition-all 
-                  duration-500  
+                  duration-300  
+                  hover:[filter:drop-shadow(0px_0px_15px_#2ff8ff)]
                   rounded-full hover:border-c-green500 '>
-                  <FaFigma className={' bg-white border-black border-2 rounded-full text-black w-9 h-9 p-1'} />
+                  <PiFigmaLogoBold  className={' bg-white border-black border-2 rounded-full text-black w-9 h-9 p-1'} />
                 </Link>
               </div>
 
@@ -245,8 +256,9 @@ export default function Display(){
           className={`${displayOn? 
           ('opacity-1 right-0  border-c-orange500 [box-shadow:_0px_0px_8.4px_2px_#FF3D00;] ')
           : hiddenProperties}
+          group
           transition-all 
-          duration-1000 
+          duration-700 
           cursor-pointer 
           box-content 
           border-l-2 
@@ -260,32 +272,44 @@ export default function Display(){
         `}>
           <Image 
             height={'480'} 
-            style={{
-              transform:"skew(25deg,0) translatex(-150px)",
-              height:'100%',
-              width:'1000px',
-              maxWidth:'1000px',
-              position:'absolute' ,
-              objectPosition:"-20px 0" ,
-              filter:"blur(1px)", 
-              objectFit:'cover' 
-              }}
+            className='
+            absolute
+            [transform:skew(25deg,0)_translatex(-130px)]
+            [object-position:-50px_-30px]
+            h-[600px]
+            w-[1000px]
+            [max-width:1000px]
+            bg-cover
+            -top-5
+            transition-all
+            duration-500
+            blur-md
+            brightness-75
+            group-hover:blur-none
+            group-hover:brightness-100
+            '
             width='1440' 
             alt=""  
             src={Project3.src} />
           <p
-            className={`[writing-mode:vertical-rl]
-            [transform:scale(-1)skew(25deg)rotate(25deg)]
-            top-40
+            className={`
+            ss:[writing-mode:vertical-rl]
+            ss:[transform:scale(-1)skew(25deg)rotate(25deg)]
+            top-52
             ss:top-52
-            text-lg
+            text-2xl
             skew
-            left-3
+            w-full
+            pl-5
+            mdall:h-14
+            border-t
+            border-b
+            [line-height:56px]
+            group-hover:bg-c-gray900     
+            group-hover:text-c-green500
             z-10
             text-white
-            bg-transparent
             absolute
-            ${orbitron.className}
             font-medium`}>{allProjects[3].title}</p>
         </div>
 
@@ -295,8 +319,9 @@ export default function Display(){
             ${displayOn?
             ('opacity-1 right-4  border-c-orange500 [box-shadow:_0px_0px_8.4px_2px_#FF3D00;] '):
             hiddenProperties}
+            group
             transition-all
-            duration-1000
+            duration-700
             cursor-pointer
             box-content
             border-l-2
@@ -307,31 +332,45 @@ export default function Display(){
             absolute
             h-full`}>
           <Image 
-            height={'480'} 
+            height={'580'} 
             width='1440' 
             alt="" 
-            style={{
-              transform:"skew(25deg,0) translatex(-130px)",
-              height:'100%',
-              width:'1000px',
-              maxWidth:'1000px',
-              position:'absolute' ,
-              objectPosition:"-20px 0" ,
-              filter:"blur(1px)", 
-              objectFit:'cover' 
-              }} src={Project2.src} />
-          <p
-            className={`[writing-mode:vertical-rl]
-            [transform:scale(-1)skew(25deg)rotate(25deg)]
-            top-40
-            ss:top-52
-            skew
-            left-3
-            z-10
-            text-lg
-            text-white
+            className='
             absolute
-            ${orbitron.className}
+            [transform:skew(25deg,0)_translatex(-130px)]
+            [object-position:-50px_-30px]
+            h-[600px]
+            w-[1300px]
+            [max-width:1300px]
+            bg-cover
+            -top-5
+            transition-all
+            duration-500
+            blur-md
+            brightness-75
+            group-hover:blur-none
+            group-hover:brightness-100
+            '
+            src={Project2.src} />
+          <p
+            className={`
+            ss:[writing-mode:vertical-rl]
+            ss:[transform:scale(-1)skew(25deg)rotate(25deg)]
+            top-52
+            ss:top-52
+            text-2xl
+            skew
+            z-10
+            text-white
+            w-full
+            pl-5
+            mdall:h-14
+            [line-height:56px]
+            border-t
+            border-b
+            group-hover:bg-c-gray900   
+            group-hover:text-c-green500
+            absolute
             font-medium`}>{allProjects[2].title}</p>
         </div>
 
@@ -341,12 +380,14 @@ export default function Display(){
           ${displayOn?
           ("opacity-1 [right:-75%] border-c-orange500 [box-shadow:_0px_0px_8.4px_2px_#FF3D00;] "):
           hiddenProperties}
+          group 
           top-0
           transition-all
-          duration-1000
+          duration-700
           cursor-pointer
           box-content
           border-l-2
+          
           rounded-sm
           overflow-hidden
           -skew-x-25
@@ -359,7 +400,8 @@ export default function Display(){
             width='1440'
             alt=""
             className='
-            
+            transition-all
+            duration-500
             transform 
             skew-x-25 
             translate-x-[-80px] 
@@ -367,21 +409,31 @@ export default function Display(){
             max-w-[800px] 
             absolute 
             object-cover 
-            blur-sm"'
+            blur-md
+            brightness-75
+            group-hover:blur-none
+            group-hover:brightness-100
+            '
             src={FirstImage.src} />
           <p
             className={`
-            [writing-mode:vertical-rl] 
-            [transform:scale(-1)skew(25deg)rotate(25deg)]
-            top-40
+            ss:[writing-mode:vertical-rl]
+            ss:[transform:scale(-1)skew(25deg)rotate(25deg)]
+            top-52
             ss:top-52
+            text-2xl
             skew
-            left-3
             z-10
-            text-white
-            text-lg
+            text-white       
+            w-full
+            pl-5            
+            border-t
+            border-b
+            mdall:h-14
+            [line-height:56px]
+            group-hover:bg-c-gray900   
+            group-hover:text-c-green500
             absolute
-            ${orbitron.className}
             font-medium`}>{allProjects[1].title}</p>
         </div>
       </motion.div>

@@ -33,7 +33,7 @@ export default function SvgOverlay(){
         <div
           className='
           [box-shadow:0px_3px_5px_2px_#00e25a92]
-          [height:470px]
+          [height:414px]
           ss:[height:470px]
           [width:2px]
           bg-c-green500

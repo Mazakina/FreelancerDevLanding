@@ -90,7 +90,7 @@ export function Card({index,currentActive,title, content,setCurrentActive }:Card
       `}
       onClick={handleClick}
       >
-      <Image src={srcUrl} alt='' className="absolute  w-full  h-full object-cover brightness-50" />
+      <Image src={srcUrl} alt='' className="absolute  w-full  h-full object-cover brightness-[0.20]" />
       <div className={`flex transition-all [transition-duration:.8s] relative z-10 up-to-md:mt-5 mt-8 items-center  ${active? 'ml-8': 'ml-5'}`}>
         { index===0 && <BsCodeSquare className={iconClass} />}
         { index===1 && <PiLayoutLight className={iconClass} />}

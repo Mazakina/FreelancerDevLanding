@@ -30,13 +30,13 @@ export default function HomeSec(){
         flex
         justify-center
         mt-32
+        mb-auto
         mdall:mt-auto
-        md:mb-[4rem]
         mx-auto
       ">
         <SocialsLink icon='github' href='https://github.com/Mazakina' />
         <SocialsLink icon='linkedin' href='https://www.linkedin.com/in/paulo-mazakina-1236811b4/' />
-        <SocialsLink icon='phone' href='' />
+        <SocialsLink icon='phone' href='https://wa.me/5511966092722' />
       </div>
       <div
         id='center-home'

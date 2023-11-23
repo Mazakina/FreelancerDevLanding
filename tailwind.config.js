@@ -35,7 +35,7 @@ module.exports = {
         "c-gray700": "#2D2D2D",
         "c-gray900": "#141414",
         "c-orange500": "#ff8969",
-        // #ff5736
+        "c-orange700": "#ff5736",
         // "c-green500": "#00E25B",
         "c-green500": "#00FFB2",
         "c-cyan500": "#00FFB2",

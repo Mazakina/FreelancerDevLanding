@@ -112,10 +112,10 @@ export default function ContactMeSec() {
     event.target.setCustomValidity('');
   };
   
-  const inputContact = ' rounded-md bg-c-blue800  text-white p-1 ' + sans.className
+  const inputContact = ' rounded-md bg-c-blue800 mt-1 text-white p-1 ' + sans.className
 
   return (
-    <div id='contact' className={`max-w-4xl text-white  mx-auto z-20 sticky mt-16 mb-20`}>
+    <div id='contact' className={`max-w-4xl  text-white  mx-auto z-20 sticky mt-16 mb-20`}>
       <form ref={ref} method='post' action='contact' onSubmit={submitHandler}>
         <AnimatePresence>
           {isInView ? (
@@ -163,7 +163,7 @@ export default function ContactMeSec() {
               <motion.div
                 variants={item}
                 className={`${orbitron.className}  
-                transition-all duration-1000 w-4/5  ss:flex-col flex justify-center text-base`}>
+                transition-all duration-1000 w-4/5 mt-3  ss:flex-col flex justify-center text-base`}>
                 <div className="flex flex-col ss:mx-auto ss:[width:100%] ss:pl-0 w-1/5">
                   <label htmlFor="telefone">Telefone:</label>
                   <input
@@ -191,8 +191,8 @@ export default function ContactMeSec() {
               <motion.div
                 variants={item}
                 className={`${orbitron.className} 
-                transition-all duration-1000mx-auto w-4/5 flex flex-col justify-center text-base`}>
-                <label htmlFor="mensagem">Mensagem: <span className="text-red-400">*</span></label>
+                transition-all duration-1000mx-auto mt-3 w-4/5 flex flex-col justify-center text-base`}>
+                <label  htmlFor="mensagem">Mensagem: <span className="text-red-400">*</span></label>
                 <textarea
                   onInvalid={handleInvalid}
                   required
