@@ -1,0 +1,29 @@
+export function NavTitle({title}:{title:string}){
+  return(
+    <p
+      className={`
+      ss:[writing-mode:vertical-rl]
+      ss:[transform:scale(-1)skew(25deg)rotate(25deg)]
+      top-52
+      ss:top-52
+      text-2xl
+      skew
+      z-10
+      text-white
+      w-full
+      pl-5
+      mdall:h-14
+      ss:left-5
+      transition-all
+      duration-500  
+      [line-height:56px]
+      mdall:border-t
+      mdall:border-b
+      group-hover:mdall:bg-c-gray900   
+      group-hover:text-c-green500
+      absolute
+      font-medium`}>
+        {title}
+      </p>
+  )
+}

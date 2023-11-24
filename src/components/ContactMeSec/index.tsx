@@ -1,5 +1,5 @@
 'use client';
-import { useReducer, useRef, useState } from "react";
+import { FormEvent, FormEventHandler, InvalidEvent, useReducer, useRef, useState } from "react";
 import { blanka, orbitron, sans } from "@/app/ui/fonts";
 import { motion, useInView, useAnimation, AnimatePresence, easeInOut } from "framer-motion";
 import { sendContactForm } from "@/lib/contact";
@@ -94,7 +94,7 @@ export default function ContactMeSec() {
   }
 
 
-  async  function submitHandler(event: any) {
+  async  function submitHandler(event:React.FormEvent<HTMLFormElement>) {
       event?.preventDefault()
       dispatch({type:ACTIONS.SET_IS_LOADING,isLoading:true})
       const response = await sendContactForm(state)
@@ -102,7 +102,7 @@ export default function ContactMeSec() {
       console.log(data)
   }
 
-  const handleInvalid = (event:any) => {
+  const handleInvalid = (event:InvalidEvent<HTMLInputElement>) => {
     if (event.target.setCustomValidity) {
       event.target.setCustomValidity('Preencha este campo');
     }

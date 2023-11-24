@@ -7,10 +7,11 @@ import M from '@images/M.png'
 import Image from 'next/image'
 import { useRef, useState } from 'react'
 import Link from 'next/link'
-import { roboto, orbitron, blanka } from "@/app/ui/fonts"
+import {orbitron, blanka } from "@/app/ui/fonts"
 import { motion, useInView } from 'framer-motion'
 import { FaGithub } from 'react-icons/fa'
 import { PiFigmaLogoBold } from 'react-icons/pi'
+import { NavTitle } from './NavTitle'
 
 export default function Display(){
   const allProjects = [
@@ -275,11 +276,8 @@ export default function Display(){
             className='
             absolute
             [transform:skew(25deg,0)_translatex(-130px)]
-            [object-position:-50px_-30px]
-            h-[600px]
-            w-[1000px]
             [max-width:1000px]
-            bg-cover
+            object-contain
             -top-5
             transition-all
             duration-500
@@ -291,26 +289,7 @@ export default function Display(){
             width='1440' 
             alt=""  
             src={Project3.src} />
-          <p
-            className={`
-            ss:[writing-mode:vertical-rl]
-            ss:[transform:scale(-1)skew(25deg)rotate(25deg)]
-            top-52
-            ss:top-52
-            text-2xl
-            skew
-            w-full
-            pl-5
-            mdall:h-14
-            border-t
-            border-b
-            [line-height:56px]
-            group-hover:bg-c-gray900     
-            group-hover:text-c-green500
-            z-10
-            text-white
-            absolute
-            font-medium`}>{allProjects[3].title}</p>
+            <NavTitle title={allProjects[1].title}/>
         </div>
 
         <div id='second-project'
@@ -352,26 +331,7 @@ export default function Display(){
             group-hover:brightness-100
             '
             src={Project2.src} />
-          <p
-            className={`
-            ss:[writing-mode:vertical-rl]
-            ss:[transform:scale(-1)skew(25deg)rotate(25deg)]
-            top-52
-            ss:top-52
-            text-2xl
-            skew
-            z-10
-            text-white
-            w-full
-            pl-5
-            mdall:h-14
-            [line-height:56px]
-            border-t
-            border-b
-            group-hover:bg-c-gray900   
-            group-hover:text-c-green500
-            absolute
-            font-medium`}>{allProjects[2].title}</p>
+            <NavTitle title={allProjects[2].title}/>
         </div>
 
         <div id='third-project'
@@ -415,26 +375,7 @@ export default function Display(){
             group-hover:brightness-100
             '
             src={FirstImage.src} />
-          <p
-            className={`
-            ss:[writing-mode:vertical-rl]
-            ss:[transform:scale(-1)skew(25deg)rotate(25deg)]
-            top-52
-            ss:top-52
-            text-2xl
-            skew
-            z-10
-            text-white       
-            w-full
-            pl-5            
-            border-t
-            border-b
-            mdall:h-14
-            [line-height:56px]
-            group-hover:bg-c-gray900   
-            group-hover:text-c-green500
-            absolute
-            font-medium`}>{allProjects[1].title}</p>
+            <NavTitle title={allProjects[1].title}/>
         </div>
       </motion.div>
     </>

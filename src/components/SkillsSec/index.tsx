@@ -1,4 +1,4 @@
-import Display from "./display"
+import Display from "./Display"
 import AboutMe from "../AboutMe"
 import Carrosel from "../Carrosel"
 import { blanka } from "@/app/ui/fonts"
