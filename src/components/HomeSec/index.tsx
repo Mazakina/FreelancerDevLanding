@@ -1,17 +1,15 @@
 'use client'
 
-import ProjectDisplay from "../ProjectDisplay";
-import BgImage from "../BgImage";
+import ProjectDisplay from '../ProjectDisplay'
+import BgImage from '../BgImage'
 
-import { orbitron , alexana } from "@/app/ui/fonts"
-import { motion } from "framer-motion";
-import SocialsLink from "./SocialsLink";
+import { orbitron, alexana } from '@/app/ui/fonts'
+import SocialsLink from './SocialsLink'
 
-
-export default function HomeSec(){
-  return(
+export default function HomeSec() {
+  return (
     <section
-      id='home'
+      id="home"
       style={{}}
       className={`
       relative
@@ -24,8 +22,9 @@ export default function HomeSec(){
       mx-auto
       ${orbitron.className}`}
     >
-      <BgImage/>
-      <div className="
+      <BgImage />
+      <div
+        className="
         z-20
         flex
         justify-center
@@ -33,13 +32,17 @@ export default function HomeSec(){
         mb-auto
         mdall:mt-auto
         mx-auto
-      ">
-        <SocialsLink icon='github' href='https://github.com/Mazakina' />
-        <SocialsLink icon='linkedin' href='https://www.linkedin.com/in/paulo-mazakina-1236811b4/' />
-        <SocialsLink icon='phone' href='https://wa.me/5511966092722' />
+      "
+      >
+        <SocialsLink icon="github" href="https://github.com/Mazakina" />
+        <SocialsLink
+          icon="linkedin"
+          href="https://www.linkedin.com/in/paulo-mazakina-1236811b4/"
+        />
+        <SocialsLink icon="phone" href="https://wa.me/5511966092722" />
       </div>
       <div
-        id='center-home'
+        id="center-home"
         className="
         z-20
         absolute
@@ -52,7 +55,7 @@ export default function HomeSec(){
         items-center
         flex-col
         "
-        >
+      >
         <h1
           className={`
           ${alexana.className}
@@ -61,21 +64,24 @@ export default function HomeSec(){
           text-[92px]
           tracking-[4.6px]
           `}
-          >
+        >
           MAZA<span className="text-c-orange500">K</span>INA
         </h1>
-        <p className={`
+        <p
+          className={`
           ${orbitron.className}
           text-white
           tracking-[1px]
           ss:text-sm
           ss:w-60
           text-center
-          `}>
+          `}
+        >
           Desenvolvedor Front-end | UI | UX | WEB
         </p>
       </div>
-      <div className='
+      <div
+        className="
         ss:flex-col 
         sticky 
         mx-auto
@@ -88,8 +94,9 @@ export default function HomeSec(){
         lg:justify-center
         xl:justify-center
         ss:[padding-top:0rem] 
-      '>
-        <ProjectDisplay/>
+      "
+      >
+        <ProjectDisplay />
       </div>
     </section>
   )

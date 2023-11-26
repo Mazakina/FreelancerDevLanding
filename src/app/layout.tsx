@@ -14,8 +14,13 @@ export default function RootLayout({
 }) {
   return (
     <html className="scroll-smooth" lang="en">
-      <body style={{background:'#E3E3E3'}} className={" text-c-gray700 min-h-screen"}>{children}</body> 
-      <Script src="https://smtpjs.com/v3/smtp.js"/>
+      <body
+        style={{ background: '#E3E3E3' }}
+        className={' text-c-gray700 min-h-screen'}
+      >
+        {children}
+      </body>
+      <Script src="https://smtpjs.com/v3/smtp.js" />
     </html>
   )
 }

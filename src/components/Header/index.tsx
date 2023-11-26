@@ -1,18 +1,17 @@
-import Division from "../Division";
-import Link from "next/link";
-import { orbitron } from "@/app/ui/fonts"
+import Division from '../Division'
+import Link from 'next/link'
+import { orbitron } from '@/app/ui/fonts'
 
-interface HeaderSiteProps{
-  className?:string;
+interface HeaderSiteProps {
+  className?: string
 }
-export default function Header({className}:HeaderSiteProps){
-  
-  return(
+export default function Header({ className }: HeaderSiteProps) {
+  return (
     <div className="ss:hidden z-30 text-white absolute -translate-x-1/2 left-1/2">
-      <header  className={`  ${className} ${orbitron.className} mt-2`  }  >
-        <Link href="#home" className='ml-10 cursor-pointer' >
+      <header className={`  ${className} ${orbitron.className} mt-2`}>
+        <Link href="#home" className="ml-10 cursor-pointer">
           {/* Home */}
-        </Link>  
+        </Link>
         {/* <Link href='#skills' className='ml-10 cursor-pointer'>
           Meus Trabalhos
         </Link>
@@ -23,7 +22,14 @@ export default function Header({className}:HeaderSiteProps){
           Fale Comigo
         </Link> */}
       </header>
-      <Division width='98vw' height='2px' marginTop='.5rem' marginBottom='.5rem' marginLeft='auto' marginRight="auto" />
+      <Division
+        width="98vw"
+        height="2px"
+        marginTop=".5rem"
+        marginBottom=".5rem"
+        marginLeft="auto"
+        marginRight="auto"
+      />
     </div>
   )
 }

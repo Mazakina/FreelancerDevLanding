@@ -1,16 +1,22 @@
-import { motion } from "framer-motion"
-import Image, { StaticImageData } from "next/image"
+import { motion } from 'framer-motion'
+import Image, { StaticImageData } from 'next/image'
 
-interface Props{
-  img:StaticImageData,
-  className:React.ComponentProps<'div'>['className'],
-  text:string,
-  index:number,
-  href:string
+interface Props {
+  img: StaticImageData
+  className: React.ComponentProps<'div'>['className']
+  text: string
+  index: number
+  href: string
 }
-export default function WideLabel({img,className='',href,text,index}:Props){
+export default function WideLabel({
+  img,
+  className = '',
+  href,
+  text,
+  index,
+}: Props) {
   const isFirst = index === 0
-  return(
+  return (
     <div
       className={`
       ${className}
@@ -23,9 +29,9 @@ export default function WideLabel({img,className='',href,text,index}:Props){
       hover:[filter:drop-shadow(0px_0px_15px_#2ff8ff)] 
       items-center
       justify-center
-      `}  
-      >
-        <motion.a
+      `}
+    >
+      <motion.a
         href={href}
         className={`
         ${!isFirst && '-scale-y-100 ss:mt-4 '}
@@ -36,7 +42,7 @@ export default function WideLabel({img,className='',href,text,index}:Props){
         cursor-pointer
         bg-[linear-gradient(200deg,_#fed9b7b2,_#00b0b9bc);]
         `}
-        >
+      >
         <div
           className={`
           relative
@@ -46,18 +52,18 @@ export default function WideLabel({img,className='',href,text,index}:Props){
           clip-path-wide
           `}
         >
-          <Image 
-            className={
-            `
+          <Image
+            className={`
             brightness-50
             group-hover:brightness-110
             '
             ${!isFirst && '-scale-y-100'}
-            `
-            }
-            src={img} alt='' 
+            `}
+            src={img}
+            alt=""
           />
-          <motion.p className={`
+          <motion.p
+            className={`
             -translate-x-1/2 left-1/2
             -translate-y-1/2 top-1/2
             absolute
@@ -68,12 +74,11 @@ export default function WideLabel({img,className='',href,text,index}:Props){
             group-hover:opacity-0
             ${!isFirst && '-scale-y-100'}
             text-white`}
-            >
-              {text}
+          >
+            {text}
           </motion.p>
         </div>
       </motion.a>
     </div>
-    
   )
 }

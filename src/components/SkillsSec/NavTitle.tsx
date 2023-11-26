@@ -1,5 +1,5 @@
-export function NavTitle({title}:{title:string}){
-  return(
+export function NavTitle({ title }: { title: string }) {
+  return (
     <p
       className={`
       ss:[writing-mode:vertical-rl]
@@ -17,13 +17,16 @@ export function NavTitle({title}:{title:string}){
       transition-all
       duration-500  
       [line-height:56px]
-      mdall:border-t
-      mdall:border-b
-      group-hover:mdall:bg-c-gray900   
-      group-hover:text-c-green500
+      mdall:border-t-2
+      mdall:border-b-2
+      mdall:bg-c-gray900   
+      group-hover:mdall:border-c-gray900   
+      group-hover:mdall:bg-c-cyan500   
+      mdall:group-hover:text-black
       absolute
-      font-medium`}>
-        {title}
-      </p>
+      font-medium`}
+    >
+      {title}
+    </p>
   )
 }

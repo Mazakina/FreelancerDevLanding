@@ -38,7 +38,7 @@ module.exports = {
         "c-orange700": "#ff5736",
         // "c-green500": "#00E25B",
         "c-green500": "#00FFB2",
-        "c-cyan500": "#00FFB2",
+        "c-cyan500": "#00fff2",
         "c-blue800": "#171B26", 
       },
       backgroundImage: {
