@@ -1,7 +1,7 @@
 import AboutMe from '../AboutMe'
 import Carrosel from '../Carrosel'
 import { blanka } from '@/app/ui/fonts'
-import { Display } from './Display'
+import { Frame } from './Frame'
 
 export default function SkillsSec() {
   return (

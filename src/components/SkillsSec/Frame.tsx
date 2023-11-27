@@ -13,7 +13,7 @@ import { FaGithub } from 'react-icons/fa'
 import { PiFigmaLogoBold } from 'react-icons/pi'
 import { NavTitle } from './NavTitle'
 
-export function Display() {
+export function Frame() {
   const allProjects = [
     {
       id: 0,
