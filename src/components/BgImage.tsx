@@ -37,7 +37,7 @@ export default function BgImage() {
       h-screen-1
       fixed
       overflow-hidden
-      bg-teal-800
+      bg-gray-800
       "
     >
       <svg
