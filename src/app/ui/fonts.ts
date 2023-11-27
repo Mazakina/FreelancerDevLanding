@@ -1,4 +1,9 @@
-import { Anton, Noto_Sans, Orbitron, Roboto } from 'next/font/google'
+import {
+  Anton,
+  Noto_Sans as NotoSans,
+  Orbitron,
+  Roboto,
+} from 'next/font/google'
 import localFont from 'next/font/local'
 
 export const blanka = localFont({
@@ -16,7 +21,7 @@ export const orbitron = Orbitron({
   preload: true,
 })
 
-export const sans = Noto_Sans({
+export const sans = NotoSans({
   weight: '400',
   subsets: ['latin'],
 })
