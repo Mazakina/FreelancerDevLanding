@@ -1,3 +1,5 @@
+'use client'
+
 import bgImg from '@images/1.png'
 import { motion } from 'framer-motion'
 import Image from 'next/image'

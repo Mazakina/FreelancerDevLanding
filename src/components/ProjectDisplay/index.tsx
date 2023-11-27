@@ -1,7 +1,7 @@
+'use client'
+
 import ProjectOne from '@images/wide1.png'
 import ProjectTwo from '@images/wide2.png'
-import ProjectThree from '@images/wide3.png'
-import ProjectFour from '@images/wide4.png'
 import { easeInOut, motion } from 'framer-motion'
 import { blanka } from '@/app/ui/fonts'
 import WideLabel from './WideLabel'
@@ -34,7 +34,7 @@ export default function ProjectDisplay() {
       className=" 
       w-[85%] 
       mx-auto
-      
+      [min-height:100px]
       mb-12
       flex 
       justify-around 
@@ -45,25 +45,24 @@ export default function ProjectDisplay() {
       ss:mb-20
        "
     >
-      {/* <Label className={'ss:hidden '}  index={0} img={ProjectOne} text={'Projetos'} /> */}
       <div className="flex flex-col">
         <WideLabel
           href="#projects"
-          className="ss:hidden mb-4"
+          className="mdall:hidden mb-4"
           index={1}
           img={ProjectOne}
           text={'Projetos'}
         />
         <WideLabel
           href="#contact"
-          className="ss:hidden ml-12"
+          className="mdall:hidden ml-12"
           index={0}
           img={ProjectTwo}
           text={'Fale Comigo'}
         />
       </div>
 
-      <motion.div
+      <motion.a
         id="see-more"
         variants={seeMore}
         initial="hidden"
@@ -74,14 +73,15 @@ export default function ProjectDisplay() {
           duration: 2,
           repeatType: 'mirror',
         }}
+        href="#projetos"
         className="
+        cursor-pointer
         ss:hidden
         absolute 
         hover:text-c-green500
         -translate-x-1/2
-        md:top-[-30%]
         left-[49.3%]
-        top-[-50%] z-10  "
+         z-10  "
       >
         <svg
           className="
@@ -118,9 +118,9 @@ export default function ProjectDisplay() {
         >
           Scroll
         </p>
-      </motion.div>
+      </motion.a>
       <div className=" flex flex-col">
-        <WideLabel
+        {/* <WideLabel
           className="ml-12 ss:ml-0 mb-4"
           href="#projects"
           index={0}
@@ -133,9 +133,8 @@ export default function ProjectDisplay() {
           href="#about-me"
           img={ProjectFour}
           text={'Sobre mim'}
-        />
+        /> */}
       </div>
-      {/* <Label className={'ss:mt-5  ml-10 ss:ml-6'}  index={1} img={ProjectTwo} text={'Sobre mim'} /> */}
     </motion.ul>
   )
 }

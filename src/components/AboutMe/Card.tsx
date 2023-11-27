@@ -28,7 +28,7 @@ export function Card({
 }: CardProps) {
   const active = index === currentActive
   const iconClass = `h-9 w-9  [min-width:36px] text-lg text-white  ${
-    !active && 'mx-auto'
+    !active && 'lg-all:mx-auto'
   }`
   const srcUrl = (() => {
     if (index === 0) {

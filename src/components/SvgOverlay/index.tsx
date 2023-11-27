@@ -23,25 +23,7 @@ export default function SvgOverlay() {
         [margin-left:1.53vw] 
       "
       >
-        <VerticalDivision height="420px" />
-        <div className="w-4 h-4 rounded-full border-1  border-c-green500 shadow-inner mx-auto shadow-c-green500" />
-        <VerticalDivision height="100px" />
-        <p
-          className={`text-c-green500 [writing-mode:vertical-lr] text-sm ${blanka.className} -mr-2 `}
-        >
-          FRONT-END DEVELOPER
-        </p>
-        <div
-          className="
-          [box-shadow:0px_3px_5px_2px_#00e25a92]
-          [height:414px]
-          [width:2px]
-          bg-c-green500
-          rounded
-          [margin:1rem_auto_-.5rem]
-          "
-        />
-
+        <HomeLeftSvg />
         <ProjectSvg />
         <div
           className="
@@ -109,5 +91,30 @@ export function VerticalDivision({ height }: { height: string }) {
         height: `${height}`,
       }}
     />
+  )
+}
+
+export function HomeLeftSvg() {
+  return (
+    <>
+      <VerticalDivision height="420px" />
+      <div className="w-4 h-4 rounded-full border-1  border-c-green500 shadow-inner mx-auto shadow-c-green500" />
+      <VerticalDivision height="100px" />
+      <p
+        className={`text-c-green500 [writing-mode:vertical-lr] text-sm ${blanka.className} -mr-2 `}
+      >
+        FRONT-END DEVELOPER
+      </p>
+      <div
+        className="
+      [box-shadow:0px_3px_5px_2px_#00e25a92]
+      [height:414px]
+      [width:2px]
+      bg-c-green500
+      rounded
+      [margin:1rem_auto_-.5rem]
+      "
+      />
+    </>
   )
 }

@@ -1,10 +1,10 @@
-'use client'
-
 import ProjectDisplay from '../ProjectDisplay'
 import BgImage from '../BgImage'
 
-import { orbitron, alexana } from '@/app/ui/fonts'
+import { orbitron } from '@/app/ui/fonts'
 import SocialsLink from './SocialsLink'
+import { Title } from './Title'
+import { Description } from './Description'
 
 export default function HomeSec() {
   return (
@@ -56,29 +56,8 @@ export default function HomeSec() {
         flex-col
         "
       >
-        <h1
-          className={`
-          ${alexana.className}
-          ss:text-[40px]
-          text-white
-          text-[92px]
-          tracking-[4.6px]
-          `}
-        >
-          MAZA<span className="text-c-orange500">K</span>INA
-        </h1>
-        <p
-          className={`
-          ${orbitron.className}
-          text-white
-          tracking-[1px]
-          ss:text-sm
-          ss:w-60
-          text-center
-          `}
-        >
-          Desenvolvedor Front-end | UI | UX | WEB
-        </p>
+        <Title />
+        <Description />
       </div>
       <div
         className="
