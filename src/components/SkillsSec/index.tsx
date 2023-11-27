@@ -16,7 +16,7 @@ export default function SkillsSec() {
           MINHAS SKILLS
         </h4>
         <Carrosel velocity={-2} />
-        <Display />
+        <Frame />
       </div>
       <AboutMe />
     </div>
