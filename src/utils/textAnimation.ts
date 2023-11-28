@@ -11,7 +11,7 @@ export const useTitleAnimation = ({
   length,
   interval,
 }: TitleAnimationProps) => {
-  const letterArray = ['▒', '▓', '▓', '░', '▐', '<', '>']
+  const letterArray = ['▒', '▓', '▓', '░', '▐', '█', '▌']
 
   const replaceCharacters = (text: string, revealedIndexes: number[]) => {
     const regex = /./g

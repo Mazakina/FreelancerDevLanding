@@ -9,8 +9,8 @@ export function Description() {
   const { handleReplace } = useTitleAnimation({
     text,
     setText,
-    length: 18,
-    interval: 100,
+    length: 38,
+    interval: 70,
   })
   useEffect(() => {
     handleReplace()

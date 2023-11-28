@@ -9,7 +9,7 @@ export function Title() {
   const { handleReplace } = useTitleAnimation({
     text,
     setText,
-    length: 18,
+    length: 20,
     interval: 100,
   })
   useEffect(() => {
