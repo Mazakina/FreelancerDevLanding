@@ -1,6 +1,6 @@
 'use client'
 
-import FirstImage from '@images/htmlImgWebp.webp'
+import Project1 from '@images/htmlImgWebp.webp'
 import Project2 from '@images/Rect1.png'
 import Project3 from '@images/projeto2.png'
 import M from '@images/M.png'
@@ -29,7 +29,7 @@ export function Frame() {
     },
     {
       id: 1,
-      backgroundImg: Project3.src,
+      backgroundImg: Project1.src,
       tools: ['html'],
       title: 'Space Travel',
       language: 'HTML & CSS',
@@ -53,7 +53,7 @@ export function Frame() {
     },
     {
       id: 3,
-      backgroundImg: FirstImage.src,
+      backgroundImg: Project3.src,
       tools: ['reactJs', 'nextJs', 'prismic', 'html'],
       title: 'Ink-Trail',
       language: 'React JS',
@@ -94,7 +94,7 @@ export function Frame() {
       </h4>
       <motion.div
         ref={ref}
-        id="project-sec"
+        id="project-section"
         className={`
         ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}
         transition-all duration-1000  
@@ -116,6 +116,7 @@ export function Frame() {
           id="overal-display"
           className={`transition-all duration-700  
           absolute 
+          cursor-pointer
           h-full w-full 
           `}
         >
@@ -168,6 +169,7 @@ export function Frame() {
             [transition:all_1300ms_ease-in-out]
             flex 
             backdrop-blur-2xl
+            cursor-default
             border-l
             border-[#ffffff38]
             flex-col 
@@ -325,7 +327,7 @@ export function Frame() {
             "
             width="1440"
             alt=""
-            src={Project3.src}
+            src={allProjects[1].backgroundImg}
           />
           <NavTitle title={allProjects[1].title} />
         </div>
@@ -424,9 +426,9 @@ export function Frame() {
             group-hover:blur-none
             group-hover:brightness-100
             "
-            src={FirstImage.src}
+            src={allProjects[3].backgroundImg}
           />
-          <NavTitle title={allProjects[1].title} />
+          <NavTitle title={allProjects[3].title} />
         </div>
       </motion.div>
     </>
