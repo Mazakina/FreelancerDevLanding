@@ -6,18 +6,19 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+
     screens: {
       'ss': {'min': '1px', 'max': '767px'},
       
       'sm': {'min': '640px', 'max': '767px'},
 
-      'up-to-md':{'min': '1px', 'max': '1140px'},
+      'up-to-md':{'min': '1px', 'max': '1290px'},
 
-      'md': {'min': '768px', 'max': '1140px'},
+      'md': {'min': '768px', 'max': '1290px'},
 
       'mdall':{'min': '768px'},
 
-      'lg-all': {'min': '1140px'},
+      'lg-all': {'min': '1290px'},
 
       'xl': {'min': '1280px', 'max': '1535px'},
 

@@ -89,7 +89,7 @@ export function Card({
     <motion.div
       ref={scope}
       whileHover={{
-        filter: 'brightness(1.5)',
+        filter: 'brightness(1.3)',
       }}
       className={` 
       ml-6
@@ -115,7 +115,8 @@ export function Card({
           ? `flex-1 
         w-[76px] 
         up-to-md:w-320 
-        up-to-md:h-[320px] 
+        up-to-md:h-[320px]
+        up-to-md:!max-h-[400px]
         border-c-cyan500 
         [box-shadow:_0px_0px_8px_3px_#00FFB2;]`
           : `
@@ -134,7 +135,7 @@ export function Card({
         className="absolute  w-full  h-full object-cover brightness-[0.20]"
       />
       <div
-        className={`flex transition-all [transition-duration:.8s] relative z-10 up-to-md:mt-5 mt-8 items-center  ${
+        className={`flex transition-all [transition-duration:.8s] relative z-10 up-to-md:mt-5 mt-8 mr-auto items-center  ${
           active ? 'ml-8' : 'ml-5'
         }`}
       >
@@ -148,8 +149,8 @@ export function Card({
           }`}
         />
         <p
-          className={`left-20 absolute transition-all [transition-duration:.8s] whitespace-nowrap  tracking-widest ${
-            active ? 'w-fit' : 'w-0'
+          className={`left-16 absolute transition-all [transition-duration:.2s] whitespace-nowrap  tracking-widest ${
+            active ? 'w-fit opacity-100' : 'w-0 opacity-0 up-to-md:w-fit up-to-md:opacity-100'
           }  `}
         >
           {title}
@@ -162,6 +163,7 @@ export function Card({
         z-10  
         transition-all [transition-duration:.8s] 
         mt-4 
+        text-sm
         [height:1px]  
         bg-white  
         rounded-sm 
@@ -177,7 +179,7 @@ export function Card({
       </h4>
       <p
         id="content"
-        className={` -left-full top-36 opacity-0 absolute [min-width:276px] w-full p-4 h-full overflow-hidden z-10 `}
+        className={` -left-full top-24 opacity-0 absolute [min-width:276px] text-sm w-full p-4 h-full overflow-hidden z-10 `}
       >
         {content}
       </p>

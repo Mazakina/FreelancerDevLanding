@@ -45,22 +45,6 @@ export default function ProjectDisplay() {
       ss:mb-20
        "
     >
-      <div className="flex flex-col">
-        <WideLabel
-          href="#projects"
-          className="mdall:hidden mb-4"
-          index={1}
-          img={ProjectOne}
-          text={'Projetos'}
-        />
-        <WideLabel
-          href="#contact"
-          className="mdall:hidden ml-12"
-          index={0}
-          img={ProjectTwo}
-          text={'Fale Comigo'}
-        />
-      </div>
 
       <motion.a
         id="see-more"
@@ -111,6 +95,7 @@ export default function ProjectDisplay() {
         absolute
         -translate-x-1/2
         text-center
+        text-sm
         left-1/2
         mt-9
         ml-2
@@ -120,20 +105,7 @@ export default function ProjectDisplay() {
         </p>
       </motion.a>
       <div className=" flex flex-col">
-        {/* <WideLabel
-          className="ml-12 ss:ml-0 mb-4"
-          href="#projects"
-          index={0}
-          img={ProjectThree}
-          text={'Projetos'}
-        />
-        <WideLabel
-          className=""
-          index={1}
-          href="#about-me"
-          img={ProjectFour}
-          text={'Sobre mim'}
-        /> */}
+
       </div>
     </motion.ul>
   )

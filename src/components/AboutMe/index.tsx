@@ -13,7 +13,7 @@ export default function AboutMe() {
 
   return (
     <div
-      className={`${orbitron.className} z-20 sticky flex justify-center  mx-auto w-full flex-col text-cyan-50 `}
+      className={`${orbitron.className} z-20 sticky flex justify-center h-fit mx-auto w-full flex-col text-cyan-50 `}
     >
       <div
         className="grid 
@@ -45,7 +45,8 @@ export default function AboutMe() {
           className="
           mdall:col-span-1
           ss:[grid-row:display]
-          h-full flex  items-center"
+          md:-mb-[250px]
+          h-fit mt-auto flex  items-center "
         >
           <div
             className={` ${orbitron.className} 
@@ -56,17 +57,19 @@ export default function AboutMe() {
             md:mb-0
             flex-1 
             md:w-[350px]
+            w-full
             lg-all:w-[660px] 
             [height:420px]
-            ss:mt-32 
-            up-to-md:h-[615px]
+            ss:mt-12 
+            up-to-md:h-[815px]
             up-to-md:flex-col
             lg-all:[max-height:420px] 
+            relative
             `}
           >
             <Card
               title={'Clear Code'}
-              content=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, sapiente?"
+              content="Priorizo código limpo e legível, aplicando Clean Architecture e DDD para criar software robusto, escalável e de fácil manutenção. Foco em componentes reutilizáveis e arquitetura que facilita a evolução e colaboração"
               index={0}
               currentActive={currentActive}
               setCurrentActive={setCurrentActive}
@@ -74,15 +77,15 @@ export default function AboutMe() {
 
             <Card
               title={'Alta Fidelidade'}
-              content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, sapiente?"
+              content="Transformo designs em interfaces visualmente impecáveis e fiéis ao layout (pixel-perfect). Com atenção aos detalhes, uso HTML semântico, CSS moderno e JS/TS (React/Next.js) para criar UIs fluidas e responsivas."
               index={1}
               currentActive={currentActive}
               setCurrentActive={setCurrentActive}
             />
 
             <Card
-              title={'Animação'}
-              content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, sapiente?."
+              title={'Animação Funcional'}
+              content="Utilizo animações sutis e estratégicas para guiar o usuário, fornecer feedback e tornar a navegação mais intuitiva e agradável, sempre equilibrando performance e engajamento visual."
               index={2}
               currentActive={currentActive}
               setCurrentActive={setCurrentActive}
@@ -90,7 +93,7 @@ export default function AboutMe() {
 
             <Card
               title={'Sobre mim'}
-              content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, sapiente?."
+              content="Desenvolvedor fullstack (React, Next.js, NestJS) apaixonado por resolver problemas com código. Com background em Audiovisual e Mecatrônica, sou analítico, atento a detalhes e resiliente. Valorizo a colaboração e estou sempre aprendendo para entregar os melhores resultados."
               index={3}
               currentActive={currentActive}
               setCurrentActive={setCurrentActive}
@@ -127,8 +130,7 @@ export default function AboutMe() {
             text-right
             `}
             >
-              Lorem ipsum dolor sit amet. <br className="ss:hidden" /> Lorem,
-              dolor.
+              Tecnologia que entrega valor <br className="ss:hidden" /> além das expectativas!
             </h3>
           </div>
           <VerticalDivision height="680px" />
