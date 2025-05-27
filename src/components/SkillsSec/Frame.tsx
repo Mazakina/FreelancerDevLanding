@@ -30,7 +30,7 @@ export function Frame() {
       title: 'Beralde Verduras',
       language: 'HTML & CSS',
       description:
-        'Space Travel é um site informativo, feito para saciar algumas curiosidade dos amantes do espaço. Utilizando os fundamentos, sem framework, apenas HTML/CSS para criar uma experiencia responsiva e otimizada',
+        'Vitrine digital B2B para Beralde Verduras (freelance). Desenvolvido com Next.js, Framer Motion e Supabase, focado em performance, UX e captação de clientes.',
       site: 'https://beraldeverduras.vercel.app/',
       github: 'https://github.com/Mazakina/beralde_website',
       figma:
