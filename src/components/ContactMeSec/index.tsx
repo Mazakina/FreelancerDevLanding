@@ -21,7 +21,7 @@ const initialState: State = {
   mensagem: '',
   isLoading: false,
 }
-
+/* eslint-disable-next-line prettier/prettier */
 function reducer(state: State, action: any) {
   switch (action.type) {
     case ACTIONS.SET_NAME:

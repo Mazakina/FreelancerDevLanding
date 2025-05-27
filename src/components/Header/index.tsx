@@ -1,11 +1,6 @@
 import Division from '../Division'
-import Link from 'next/link'
-import { orbitron } from '@/app/ui/fonts'
 
-interface HeaderSiteProps {
-  className?: string
-}
-export default function Header({ className }: HeaderSiteProps) {
+export default function Header() {
   return (
     <div className="ss:hidden z-30 text-white absolute w-full">
       <Division

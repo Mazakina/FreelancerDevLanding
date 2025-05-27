@@ -1,10 +1,7 @@
 'use client'
 
-import ProjectOne from '@images/wide1.png'
-import ProjectTwo from '@images/wide2.png'
 import { easeInOut, motion } from 'framer-motion'
 import { blanka } from '@/app/ui/fonts'
-import WideLabel from './WideLabel'
 
 export default function ProjectDisplay() {
   const container = {
@@ -45,7 +42,6 @@ export default function ProjectDisplay() {
       ss:mb-20
        "
     >
-
       <motion.a
         id="see-more"
         variants={seeMore}
@@ -104,9 +100,7 @@ export default function ProjectDisplay() {
           Scroll
         </p>
       </motion.a>
-      <div className=" flex flex-col">
-
-      </div>
+      <div className=" flex flex-col"></div>
     </motion.ul>
   )
 }

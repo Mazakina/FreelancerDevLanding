@@ -18,7 +18,8 @@ export function Frame() {
       language: 'HTML & CSS',
       site: 'https://github.com/Mazakina/tengu-e-commerce-nest-app',
       github: 'https://github.com/Mazakina/tengu-e-commerce-nest-app',
-      figma: 'https://www.figma.com/design/cHIKR0d59NVklX7DMxdwOK/Tengu?node-id=0-1&t=tu7hgV31RVTrpRkI-1',
+      figma:
+        'https://www.figma.com/design/cHIKR0d59NVklX7DMxdwOK/Tengu?node-id=0-1&t=tu7hgV31RVTrpRkI-1',
       description:
         ' Tengu-Drip é uma plataforma de e-commerce utilizando NestJS, focada em oferecer uma experiência robusta e escalável. Desenvolvido seguindo Clean Architecture e Domain-Driven Design (DDD), garantindo um código modular,de fácil manutenção',
     },
@@ -30,30 +31,38 @@ export function Frame() {
       language: 'HTML & CSS',
       description:
         'Space Travel é um site informativo, feito para saciar algumas curiosidade dos amantes do espaço. Utilizando os fundamentos, sem framework, apenas HTML/CSS para criar uma experiencia responsiva e otimizada',
-        site: 'https://beraldeverduras.vercel.app/',
-        github: 'https://github.com/Mazakina/beralde_website',
-      figma: 'https://www.figma.com/design/ov1LMm6Imi6VHzbjekX2gc/Beralde-website?node-id=0-1&t=hixY3Jgyx5MBJ8g1-1',
+      site: 'https://beraldeverduras.vercel.app/',
+      github: 'https://github.com/Mazakina/beralde_website',
+      figma:
+        'https://www.figma.com/design/ov1LMm6Imi6VHzbjekX2gc/Beralde-website?node-id=0-1&t=hixY3Jgyx5MBJ8g1-1',
     },
     {
       id: 2,
       backgroundImg: Project3.src,
-      tools: ['nextJs', 'reactJs', 'FaunaDb',"Imgur API","Correios API", 'html'],
+      tools: [
+        'nextJs',
+        'reactJs',
+        'FaunaDb',
+        'Imgur API',
+        'Correios API',
+        'html',
+      ],
       title: 'Ink Trail',
       language: 'Next JS',
       site: 'https://inktrail.vercel.app/',
       github: 'https://github.com/Mazakina/ArtMatch',
       description:
-      "InkTrail é uma aplicação JAMStack com foco na comunidade artística, Utilizando Next.js, Imgur API para upload de imagens e FaunaDB como banco de dados, A aplicação também integra a API dos Correios Para cadastro.",
-      figma: 'https://www.figma.com/design/8sWORNtMRxw1EUzt7M2BAG/Inktrail?node-id=0-1&t=H3wtSS3hNnFChvPn-1',
+        'InkTrail é uma aplicação JAMStack com foco na comunidade artística, Utilizando Next.js, Imgur API para upload de imagens e FaunaDB como banco de dados, A aplicação também integra a API dos Correios Para cadastro.',
+      figma:
+        'https://www.figma.com/design/8sWORNtMRxw1EUzt7M2BAG/Inktrail?node-id=0-1&t=H3wtSS3hNnFChvPn-1',
     },
   ]
-//Trabalho em Next Js para entrega de conteudo DEV com preview antes de se inscrever. Criado com Stripe para pagamentos, Next Auth para validação, e Prismic como CMS 
+  // Trabalho em Next Js para entrega de conteudo DEV com preview antes de se inscrever. Criado com Stripe para pagamentos, Next Auth para validação, e Prismic como CMS
 
   const ref = useRef(null)
   const isInView = useInView(ref, {
     margin: '60px 0px 0px 0px ',
   })
-
 
   return (
     <>

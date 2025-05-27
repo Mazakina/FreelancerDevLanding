@@ -130,7 +130,8 @@ export default function AboutMe() {
             text-right
             `}
             >
-              Tecnologia que entrega valor <br className="ss:hidden" /> além das expectativas!
+              Tecnologia que entrega valor <br className="ss:hidden" /> além das
+              expectativas!
             </h3>
           </div>
           <VerticalDivision height="680px" />

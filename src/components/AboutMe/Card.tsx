@@ -150,7 +150,9 @@ export function Card({
         />
         <p
           className={`left-16 absolute transition-all [transition-duration:.2s] whitespace-nowrap  tracking-widest ${
-            active ? 'w-fit opacity-100' : 'w-0 opacity-0 up-to-md:w-fit up-to-md:opacity-100'
+            active
+              ? 'w-fit opacity-100'
+              : 'w-0 opacity-0 up-to-md:w-fit up-to-md:opacity-100'
           }  `}
         >
           {title}
