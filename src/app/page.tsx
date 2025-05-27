@@ -10,7 +10,7 @@ export default async function Home() {
   return (
     <main>
       <section className="relative w-full overflow-hidden bg-c-gray900">
-        <Header className="z-10" />
+        <Header />
         <ResponsiveHeader />
         <SvgOverlay />
         <HomeSec />
