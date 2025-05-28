@@ -20,7 +20,7 @@ export default function FooterSec() {
       <div
         className={`z-30  ${orbitron.className}   sticky text-white  flex max-w-4xl mb-20 mt-20 mx-auto justify-around`}
       >
-        <ul id='footer-nav' className="ss:hidden">
+        <ul className="ss:hidden">
           <h5 className="text-c-green500 text-lg w-44">Menu</h5>
           <Contact href="#home">Home</Contact>
           <Contact href="#projects">Portfolio</Contact>
