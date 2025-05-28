@@ -92,6 +92,7 @@ export default function Project({
                 whitespace-nowrap
                 w-24  
                 transition-all 
+                
                 text-white
                 font-bold
                 text-lg
@@ -100,7 +101,7 @@ export default function Project({
 
                 `}
           >
-            Visitar &gt;
+            Visitar<p className='ss:hidden'> &gt;</p>
           </Link>
         </div>
       </div>
