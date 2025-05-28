@@ -84,7 +84,7 @@ export default function AboutMe() {
             />
 
             <Card
-              title={'Animação Funcional'}
+              title={'Animação'}
               content="Utilizo animações sutis e estratégicas para guiar o usuário, fornecer feedback e tornar a navegação mais intuitiva e agradável, sempre equilibrando performance e engajamento visual."
               index={2}
               currentActive={currentActive}
@@ -93,7 +93,7 @@ export default function AboutMe() {
 
             <Card
               title={'Sobre mim'}
-              content="Desenvolvedor fullstack (React, Next.js, NestJS) apaixonado por resolver problemas com código. Com background em Audiovisual e Mecatrônica, sou analítico, atento a detalhes e resiliente. Valorizo a colaboração e estou sempre aprendendo para entregar os melhores resultados."
+              content="Desenvolvedor fullstack (React, Next.js, NestJS) apaixonado por resolver problemas com código. Com background em Audiovisual e Mecatrônica, sou analítico, atento a detalhes e resiliente. "
               index={3}
               currentActive={currentActive}
               setCurrentActive={setCurrentActive}
