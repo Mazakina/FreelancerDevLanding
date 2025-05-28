@@ -108,6 +108,7 @@ export function Card({
       up-to-md:[min-height:75px]
       up-to-md:[max-height:320px]
       up-to-md:[max-width:80vw]
+      group
       hover:border-c-cyan500
       hover:[box-shadow:_0px_0px_8px_3px_#00FFB2;]
       ${
@@ -135,7 +136,7 @@ export function Card({
         className="absolute  w-full  h-full object-cover brightness-[0.20]"
       />
       <div
-        className={`flex transition-all [transition-duration:.8s] relative z-10 up-to-md:mt-5 mt-8 mr-auto items-center  ${
+        className={`flex transition-all [transition-duration:.8s] relative z-10 up-to-md:mt-5 mt-8 group-hover:ml-7 mr-auto items-center  ${
           active ? 'ml-8' : 'ml-5'
         }`}
       >
