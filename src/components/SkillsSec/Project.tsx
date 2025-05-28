@@ -22,7 +22,7 @@ export default function Project({
   return (
     <motion.div className="project mx-auto  mt-10 relative ss:w-[365px] w-[430px] h-[510px] ">
       <Image
-        className="z-20 w-[364px] h-[222px] rounded-xl object-left-top absolute clip-path-l-shape hover:clip-path-square-shape object-cover transition-[clip-path] duration-500 "
+        className="z-20 w-[364px] h-[222px] rounded-xl object-left-top absolute clip-path-l-shape hover:clip-path-square-shape ss:hover:clip-path-l-shape object-cover transition-[clip-path] duration-500 "
         height={222}
         width={364}
         src={src}
