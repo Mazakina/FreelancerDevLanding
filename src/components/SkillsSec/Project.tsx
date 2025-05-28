@@ -101,7 +101,7 @@ export default function Project({
 
                 `}
           >
-            Visitar<p className='ss:hidden'> &gt;</p>
+            Visitar<p className="ss:hidden"> &gt;</p>
           </Link>
         </div>
       </div>
