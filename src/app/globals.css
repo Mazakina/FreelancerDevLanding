@@ -27,47 +27,41 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-
-::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #F5F5F5;
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
 }
 
-::-webkit-scrollbar
-{
-	width: 6px;
-	background-color: #F5F5F5;
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
 }
 
-::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #555;
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
 }
 
 *:focus:after {
   border-color: transparent;
   box-shadow: none;
-  
 }
-*{
--webkit-tap-highlight-color: transparent;
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 
-}
 @layer utilities {
-
   .grid-container-phone {
     display: grid;
     grid-template-rows: [image] 0px [frame] 1fr [display] 615px;
   }
 
   .clip-path-tall {
-
-    clip-path:path("M0.00030913 393L0.000309124 37.5256L37.5258 0.000171304L94 0.00012207L94.0003 355.175L56.1755 393H0.00030913C-0.000386412 391.5 0.00030913 395.209 0.00030913 393Z")
-
+    clip-path: path(
+      "M0.00030913 393L0.000309124 37.5256L37.5258 0.000171304L94 0.00012207L94.0003 355.175L56.1755 393H0.00030913C-0.000386412 391.5 0.00030913 395.209 0.00030913 393Z"
+    );
   }
   /* Both paths below have the same number and type of commands for smooth transitions */
   .clip-path-l-shape {
@@ -81,16 +75,21 @@ body {
       "M10,0 H355 Q364,0 364,7 V104 Q364,111 364,111 H364 Q364,111 364,118 V215 Q364,222 355,222 H7 Q0,222 0,215 V7 Q0,0 7,0 Z"
     );
   }
- 
-  .clip-path-tall-frame{
-    clip-path: path"M0 409V40.5256L40.3503 0.175303L40.1751 0.000132182L110 6.10352e-05V369.175L70.1752 409H0Z"
+
+  .clip-path-tall-frame {
+    clip-path: path
+      "M0 409V40.5256L40.3503 0.175303L40.1751 0.000132182L110 6.10352e-05V369.175L70.1752 409H0Z";
   }
 
-  .clip-path-wide-frame{
-    clip-path: path("M276 0L31.9403 3.39415e-05L0.0262451 31.9141L-0.000488281 31.8874L-0.000480199 90.0001C-0.000479892 92.2092 1.79038 94.0001 3.99952 94.0001L243.175 94L280 57.1753V4C280 1.79086 278.209 -3.07227e-07 276 0Z")
+  .clip-path-wide-frame {
+    clip-path: path(
+      "M276 0L31.9403 3.39415e-05L0.0262451 31.9141L-0.000488281 31.8874L-0.000480199 90.0001C-0.000479892 92.2092 1.79038 94.0001 3.99952 94.0001L243.175 94L280 57.1753V4C280 1.79086 278.209 -3.07227e-07 276 0Z"
+    );
   }
 
-  .clip-path-wide{
-    clip-path: path("M258 -6.10352e-05L36.9403 -3.02922e-05L-0.000488281 36.9408L-0.000480902 90C-0.000480595 92.2092 1.79038 94 3.99952 94L222.175 94L262 54.1753V3.99994C262 1.7908 260.209 -6.13424e-05 258 -6.10352e-05Z")
+  .clip-path-wide {
+    clip-path: path(
+      "M258 -6.10352e-05L36.9403 -3.02922e-05L-0.000488281 36.9408L-0.000480902 90C-0.000480595 92.2092 1.79038 94 3.99952 94L222.175 94L262 54.1753V3.99994C262 1.7908 260.209 -6.13424e-05 258 -6.10352e-05Z"
+    );
   }
 }

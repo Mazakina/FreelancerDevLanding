@@ -1,33 +1,33 @@
-'use client'
+"use client";
 
-import bgImg from '@images/1.png'
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import bgImg from "@images/1.png";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function BgImage() {
-  const [test, setTest] = useState(false)
+  const [test, setTest] = useState(false);
   setTimeout(() => {
-    setTest(true)
-  }, 500)
+    setTest(true);
+  }, 300);
 
-  const [screenWidth, setScreenWidth] = useState<number>(769)
+  const [screenWidth, setScreenWidth] = useState<number>(769);
 
   const updateScreenWidth = () => {
-    setScreenWidth(window.innerWidth)
-  }
+    setScreenWidth(window.innerWidth);
+  };
 
   useEffect(() => {
-    updateScreenWidth()
+    updateScreenWidth();
 
-    window.addEventListener('resize', updateScreenWidth)
+    window.addEventListener("resize", updateScreenWidth);
 
     return () => {
-      window.removeEventListener('resize', updateScreenWidth)
-    }
-  }, [])
+      window.removeEventListener("resize", updateScreenWidth);
+    };
+  }, []);
 
-  const isLarge = screenWidth > 768
+  const isLarge = screenWidth > 768;
 
   return (
     <div
@@ -55,35 +55,39 @@ export default function BgImage() {
               animate={{
                 rotate: -360,
                 transition: {
-                  ease: 'linear',
+                  ease: "linear",
                   duration: 66,
                   repeat: Infinity,
                 },
               }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1, transition: { duration: 1 } }}
               fill="transparent"
               stroke="#d6fcf0"
               cx="50%"
               cy="48%"
               strokeWidth={3}
               strokeDasharray="10"
-              r={isLarge ? '300px' : '138px'}
+              r={isLarge ? "300px" : "138px"}
             />
             <motion.circle
               animate={{
                 rotate: 360,
                 transition: {
-                  ease: 'linear',
+                  ease: "linear",
                   duration: 60,
                   repeat: Infinity,
                 },
               }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
               fill="transparent"
               stroke="#d6fcf0"
               cx="50%"
               cy="48%"
               strokeWidth={3}
               strokeDasharray="12"
-              r={isLarge ? '315px' : '130px'}
+              r={isLarge ? "315px" : "130px"}
             />
           </>
         )}
@@ -108,9 +112,9 @@ export default function BgImage() {
         style={{
           opacity: 0.7,
           background:
-            'radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5210918114143921) 45%, rgba(0,0,0,0.95) 100%)',
+            "radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5210918114143921) 45%, rgba(0,0,0,0.95) 100%)",
           zIndex: 5,
-          position: 'absolute',
+          position: "absolute",
         }}
         className="
       w-full
@@ -130,5 +134,5 @@ export default function BgImage() {
       "
       />
     </div>
-  )
+  );
 }

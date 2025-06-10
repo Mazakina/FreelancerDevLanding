@@ -1,6 +1,6 @@
-import { PiAppWindowLight } from 'react-icons/pi'
-import { LiaUserSolid } from 'react-icons/lia'
-import { blanka } from '@/app/ui/fonts'
+import { PiAppWindowLight } from "react-icons/pi";
+import { LiaUserSolid } from "react-icons/lia";
+import { blanka } from "@/app/ui/fonts";
 
 export default function SvgOverlay() {
   return (
@@ -27,7 +27,7 @@ export default function SvgOverlay() {
         <ProjectSvg />
         <div
           className="
-          [box-shadow:0px_3px_5px_2px_#00e25a92]
+          [box-shadow:0px_3px_5px_2px_theme(colors.c-transparent-green)]
           [height:30px]
           [width:2px]
           bg-c-green500
@@ -50,7 +50,7 @@ export default function SvgOverlay() {
         "
       ></div>
     </div>
-  )
+  );
 }
 
 export function ProjectSvg() {
@@ -64,7 +64,7 @@ export function ProjectSvg() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export function AboutMeSvg() {
@@ -74,14 +74,14 @@ export function AboutMeSvg() {
       <div className="absolute bg-c-green500 w-5 h-5 blur-md top-1 left-0" />
       <div className="absolute bg-c-green500 w-5 h-5 blur-xl top-1 left-0" />
     </div>
-  )
+  );
 }
 
 export function VerticalDivision({ height }: { height: string }) {
   return (
     <div
       className="
-      [box-shadow:0px_3px_5px_2px_#00e25a92]
+      [box-shadow:0px_3px_5px_2px_theme(colors.c-transparent-green)]
       [width:2px]
       [border-radius:3px]
       [margin:1rem_auto]
@@ -91,7 +91,7 @@ export function VerticalDivision({ height }: { height: string }) {
         height: `${height}`,
       }}
     />
-  )
+  );
 }
 
 export function HomeLeftSvg() {
@@ -107,7 +107,7 @@ export function HomeLeftSvg() {
       </p>
       <div
         className="
-      [box-shadow:0px_3px_5px_2px_#00e25a92]
+      [box-shadow:0px_3px_5px_2px_theme(colors.c-transparent-green)]
       [height:414px]
       [width:2px]
       bg-c-green500
@@ -116,5 +116,5 @@ export function HomeLeftSvg() {
       "
       />
     </>
-  )
+  );
 }
