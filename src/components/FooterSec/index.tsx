@@ -1,6 +1,6 @@
-import { blanka, orbitron } from "@/app/ui/fonts";
-import Contact from "./Contact";
-import { PhoneContact } from "./PhoneContact";
+import { blanka, orbitron } from '@/app/ui/fonts'
+import Contact from './Contact'
+import { PhoneContact } from './PhoneContact'
 
 export default function FooterSec() {
   return (
@@ -47,5 +47,5 @@ export default function FooterSec() {
         </ul>
       </div>
     </footer>
-  );
+  )
 }
