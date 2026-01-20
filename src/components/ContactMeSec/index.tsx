@@ -1,59 +1,59 @@
-"use client";
-import { InvalidEvent, useEffect, useReducer, useRef, useState } from "react";
-import { blanka, orbitron, sans } from "@/app/ui/fonts";
-import { motion, useInView, AnimatePresence, easeInOut } from "framer-motion";
-import { sendContactForm } from "@/lib/contact";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+'use client'
+import { InvalidEvent, useEffect, useReducer, useRef, useState } from 'react'
+import { blanka, orbitron, sans } from '@/app/ui/fonts'
+import { motion, useInView, AnimatePresence, easeInOut } from 'framer-motion'
+import { sendContactForm } from '@/lib/contact'
+import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 
 interface State {
-  name: string;
-  email: string;
-  telefone: string;
-  assunto: string;
-  mensagem: string;
-  isLoading: boolean;
+  name: string
+  email: string
+  telefone: string
+  assunto: string
+  mensagem: string
+  isLoading: boolean
 }
 
 const initialState: State = {
-  name: "",
-  email: "",
-  telefone: "",
-  assunto: "",
-  mensagem: "",
+  name: '',
+  email: '',
+  telefone: '',
+  assunto: '',
+  mensagem: '',
   isLoading: false,
-};
+}
 /* eslint-disable-next-line prettier/prettier */
 function reducer(state: State, action: any) {
   switch (action.type) {
     case ACTIONS.SET_NAME:
-      return { ...state, name: action.payload };
+      return { ...state, name: action.payload }
     case ACTIONS.SET_EMAIL:
-      return { ...state, email: action.payload };
+      return { ...state, email: action.payload }
     case ACTIONS.SET_TELEFONE:
-      return { ...state, telefone: action.payload };
+      return { ...state, telefone: action.payload }
     case ACTIONS.SET_ASSUNTO:
-      return { ...state, assunto: action.payload };
+      return { ...state, assunto: action.payload }
     case ACTIONS.SET_MENSAGEM:
-      return { ...state, mensagem: action.payload };
+      return { ...state, mensagem: action.payload }
     case ACTIONS.SET_IS_LOADING:
-      return { ...state, isLoading: action.payload };
+      return { ...state, isLoading: action.payload }
     case ACTIONS.RESET:
-      return initialState;
+      return initialState
     default:
-      return state;
+      return state
   }
 }
 
 const ACTIONS = {
-  SET_NAME: "set-name",
-  SET_EMAIL: "set-email",
-  SET_TELEFONE: "set-telefone",
-  SET_ASSUNTO: "set-assunto",
-  SET_MENSAGEM: "set-mensagem",
-  SET_IS_LOADING: "is-loading",
-  RESET: "reset",
-};
-type ActionTypes = (typeof ACTIONS)[keyof typeof ACTIONS];
+  SET_NAME: 'set-name',
+  SET_EMAIL: 'set-email',
+  SET_TELEFONE: 'set-telefone',
+  SET_ASSUNTO: 'set-assunto',
+  SET_MENSAGEM: 'set-mensagem',
+  SET_IS_LOADING: 'is-loading',
+  RESET: 'reset',
+}
+type ActionTypes = (typeof ACTIONS)[keyof typeof ACTIONS]
 
 export default function ContactMeSec() {
   // Animation variants
@@ -65,7 +65,7 @@ export default function ContactMeSec() {
         staggerChildren: 0.3,
       },
     },
-  };
+  }
 
   const item = {
     hidden: {
@@ -78,57 +78,57 @@ export default function ContactMeSec() {
     show: {
       opacity: 1,
     },
-  };
+  }
   // State management
-  const [state, dispatch] = useReducer(reducer, initialState);
-  const [isSending, setIsSending] = useState(false);
-  const ref = useRef(null);
+  const [state, dispatch] = useReducer(reducer, initialState)
+  const [isSending, setIsSending] = useState(false)
+  const ref = useRef(null)
 
   const isInView = useInView(ref, {
-    margin: "60px 0px 0px 0px ",
-  });
+    margin: '60px 0px 0px 0px ',
+  })
 
   // Event handlers
   function handleValueChange(
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-    type: ActionTypes
+    type: ActionTypes,
   ) {
-    handleChange(event);
-    dispatch({ type, payload: event.target.value });
+    handleChange(event)
+    dispatch({ type, payload: event.target.value })
   }
 
   async function submitHandler(event: React.FormEvent<HTMLFormElement>) {
-    event?.preventDefault();
-    setIsSending(true);
-    dispatch({ type: ACTIONS.SET_IS_LOADING, isLoading: true });
-    const response = await sendContactForm(state);
-    const data = await response.json();
-    console.log("data:", data);
+    event?.preventDefault()
+    setIsSending(true)
+    dispatch({ type: ACTIONS.SET_IS_LOADING, isLoading: true })
+    const response = await sendContactForm(state)
+    const data = await response.json()
+    console.log('data:', data)
     setTimeout(() => {
-      setIsSending(false);
-    }, 1000);
-    dispatch({ type: ACTIONS.RESET });
+      setIsSending(false)
+    }, 1000)
+    dispatch({ type: ACTIONS.RESET })
   }
 
   const handleInvalid = (event: InvalidEvent<HTMLInputElement>) => {
     if (event.target.setCustomValidity) {
-      event.target.setCustomValidity("Preencha este campo");
+      event.target.setCustomValidity('Preencha este campo')
     }
-  };
+  }
   const handleInvalidTextArea = (event: InvalidEvent<HTMLTextAreaElement>) => {
     if (event.target.setCustomValidity) {
-      event.target.setCustomValidity("Preencha este campo");
+      event.target.setCustomValidity('Preencha este campo')
     }
-  };
+  }
 
   const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
-    event.target.setCustomValidity("");
-  };
+    event.target.setCustomValidity('')
+  }
 
   const inputContact =
-    " rounded-md bg-c-blue800 mt-1 text-white p-1 " + sans.className;
+    ' rounded-md bg-c-blue800 mt-1 text-white p-1 ' + sans.className
 
   return (
     <div
@@ -141,7 +141,7 @@ export default function ContactMeSec() {
         action="contact"
         onSubmit={submitHandler}
         className={`${
-          isSending ? "opacity-30" : "opacity-100"
+          isSending ? 'opacity-30' : 'opacity-100'
         } transition-all duration-500 relative  disabled:opacity-50`}
       >
         <AnimatePresence>
@@ -282,10 +282,10 @@ export default function ContactMeSec() {
           autoplay
           speed={0.5}
           className={
-            "w-50 h-50 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mb-4"
+            'w-50 h-50 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mb-4'
           }
         />
       )}
     </div>
-  );
+  )
 }

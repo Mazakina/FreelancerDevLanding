@@ -1,20 +1,20 @@
-"use client";
+'use client'
 
-import { alexana } from "@/app/ui/fonts";
-import { useTitleAnimation } from "@/utils/textAnimation";
-import { useEffect, useState } from "react";
+import { alexana } from '@/app/ui/fonts'
+import { useTitleAnimation } from '@/utils/textAnimation'
+import { useEffect, useState } from 'react'
 
 export function Title() {
-  const [text, setText] = useState("MAZAKINA");
+  const [text, setText] = useState('MAZAKINA')
   const { handleReplace } = useTitleAnimation({
     text,
     setText,
     length: 20,
     interval: 100,
-  });
+  })
   useEffect(() => {
-    handleReplace();
-  }, []);
+    handleReplace()
+  }, [])
   return (
     <h1
       className={`
@@ -30,5 +30,5 @@ export function Title() {
     >
       {text}
     </h1>
-  );
+  )
 }

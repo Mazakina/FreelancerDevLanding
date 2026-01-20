@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
-import { easeInOut, motion } from "framer-motion";
-import { blanka } from "@/app/ui/fonts";
+import { easeInOut, motion } from 'framer-motion'
+import { blanka } from '@/app/ui/fonts'
 
 export default function ProjectDisplay() {
   const container = {
@@ -13,7 +13,7 @@ export default function ProjectDisplay() {
         staggerChildren: 0.3,
       },
     },
-  };
+  }
   const seeMore = {
     hidden: {
       y: 0,
@@ -22,7 +22,7 @@ export default function ProjectDisplay() {
     visible: {
       y: 10,
     },
-  };
+  }
   return (
     <motion.ul
       variants={container}
@@ -51,7 +51,7 @@ export default function ProjectDisplay() {
           ease: easeInOut,
           repeat: Infinity,
           duration: 2,
-          repeatType: "mirror",
+          repeatType: 'mirror',
         }}
         href="#projetos"
         className="
@@ -102,5 +102,5 @@ export default function ProjectDisplay() {
       </motion.a>
       <div className=" flex flex-col"></div>
     </motion.ul>
-  );
+  )
 }
