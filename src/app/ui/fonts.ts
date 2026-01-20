@@ -24,6 +24,7 @@ export const orbitron = Orbitron({
 export const sans = NotoSans({
   weight: '400',
   subsets: ['latin'],
+  display: 'swap',
 })
 
 export const anton = Anton({
