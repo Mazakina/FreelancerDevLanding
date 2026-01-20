@@ -1,6 +1,6 @@
 'use client'
 
-import portrait from '@images/portrait.png'
+import portrait from '@images/profile.png'
 import banner from '@images/Long-banner.png'
 import Image from 'next/image'
 import { useState } from 'react'
