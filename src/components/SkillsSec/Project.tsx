@@ -1,15 +1,15 @@
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import Link from 'next/link'
-import { FaGithub } from 'react-icons/fa'
-import { PiFigmaLogoBold } from 'react-icons/pi'
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
+import { PiFigmaLogoBold } from "react-icons/pi";
 
 interface Props {
-  src: string
-  description: string
-  github: string
-  figma: string
-  site: string
+  src: string;
+  description: string;
+  github: string;
+  figma: string;
+  site: string;
 }
 export default function Project({
   src,
@@ -26,7 +26,7 @@ export default function Project({
         height={222}
         width={364}
         src={src}
-        alt={'Website preview'}
+        alt={"Website preview"}
         priority
       />
       <div
@@ -59,7 +59,7 @@ export default function Project({
                 hover:border-c-green500 "
           >
             <FaGithub
-              className={'w-9 border-transparent text-white border h-9'}
+              className={"w-9 border-transparent text-white border h-9"}
             />
           </Link>
           <Link
@@ -79,7 +79,7 @@ export default function Project({
           >
             <PiFigmaLogoBold
               className={
-                ' bg-white border-black border-2 rounded-full text-black w-9 h-9 p-1'
+                " bg-white border-black border-2 rounded-full text-black w-9 h-9 p-1"
               }
             />
           </Link>
@@ -106,5 +106,5 @@ export default function Project({
         </div>
       </div>
     </motion.div>
-  )
+  );
 }

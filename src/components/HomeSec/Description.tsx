@@ -1,23 +1,22 @@
-'use client'
+"use client";
 
-import { orbitron } from '@/app/ui/fonts'
-import { useTitleAnimation } from '@/utils/textAnimation'
-import { useEffect, useState } from 'react'
+import { orbitron } from "@/app/ui/fonts";
+import { useTitleAnimation } from "@/utils/textAnimation";
+import { useEffect, useState } from "react";
 
 export function Description() {
-  const [text, setText] = useState('Desenvolvedor Front-end | UI | UX | WEB')
+  const [text, setText] = useState("Desenvolvedor Front-end | UI | UX | WEB");
   const { handleReplace } = useTitleAnimation({
     text,
     setText,
     length: 38,
     interval: 70,
-  })
+  });
   useEffect(() => {
-    handleReplace()
-  }, [])
+    handleReplace();
+  }, []);
   return (
     <p
-      onClick={handleReplace}
       className={`
     ${orbitron.className}
     text-white
@@ -29,5 +28,5 @@ export function Description() {
     >
       {text}
     </p>
-  )
+  );
 }

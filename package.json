@@ -15,6 +15,7 @@
     "os": false
   },
   "dependencies": {
+    "@lottiefiles/dotlottie-react": "^0.17.8",
     "@motionone/utils": "^10.16.3",
     "@types/node": "20.4.5",
     "@types/react": "18.2.18",
